@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Team Daily Support</title>
+</head>
+<body>
+
+<h1>Activate Team Daily Support</h1>
+<p>This onboarding helps us support your team individually.</p>
+
+<form name="company-support"
+      method="POST"
+      data-netlify="true">
+
+  <input type="hidden" name="form-name" value="company-support">
+
+  <label>
+    Company Name:<br>
+    <input type="text" name="company_name" required>
+  </label><br><br>
+
+  <label>
+    Manager Full Name:<br>
+    <input type="text" name="manager_name" required>
+  </label><br><br>
+
+  <label>
+    Work Email Address:<br>
+    <input type="email" name="manager_email" required>
+  </label><br><br>
+
+  <label>
+    Number of Employees (default 10):<br>
+    <input type="number" name="employee_count" value="10">
+  </label><br><br>
+
+  <label>
+    What are the main challenges you face with your team?<br>
+    <textarea name="team_challenges" rows="4"></textarea>
+  </label><br><br>
+
+  <label>
+    What behaviors would you like to improve?<br>
+    <textarea name="behavior_goals" rows="4"></textarea>
+  </label><br><br>
+
+  <label>
+    Preferred communication tone for employees:<br>
+    <input type="checkbox" name="tone[]" value="Professional"> Professional<br>
+    <input type="checkbox" name="tone[]" value="Motivational"> Motivational<br>
+    <input type="checkbox" name="tone[]" value="Calm"> Calm<br>
+  </label><br><br>
+
+  <label>
+    Manager update preference:<br>
+    <input type="radio" name="manager_updates" value="Weekly"> Weekly summary<br>
+    <input type="radio" name="manager_updates" value="Monthly"> Monthly summary<br>
+    <input type="radio" name="manager_updates" value="None"> No updates<br>
+  </label><br><br>
+
+  <button type="submit">Activate Team Support</button>
+
+</form>
+
+</body>
+</html>
