@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Daily Personal Support</title>
+</head>
+<body>
+
+<h1>Tell us how you want us to support you</h1>
+<p>Everything you write here helps us personalize your daily support.</p>
+
+<form name="individual-support"
+      method="POST"
+      data-netlify="true">
+
+  <input type="hidden" name="form-name" value="individual-support">
+
+  <label>
+    First Name:<br>
+    <input type="text" name="first_name" required>
+  </label><br><br>
+
+  <label>
+    Email Address:<br>
+    <input type="email" name="email" required>
+  </label><br><br>
+
+  <label>
+    Country / Time Zone:<br>
+    <input type="text" name="timezone">
+  </label><br><br>
+
+  <label>
+    What do you want help with?<br>
+    <textarea name="daily_needs" rows="5" required></textarea>
+  </label><br><br>
+
+  <label>
+    What type of support do you need?<br>
+    <input type="checkbox" name="support_type[]" value="Reminders"> Reminders<br>
+    <input type="checkbox" name="support_type[]" value="Organization"> Organization<br>
+    <input type="checkbox" name="support_type[]" value="Motivation"> Motivation<br>
+    <input type="checkbox" name="support_type[]" value="Habits"> Habits<br>
+    <input type="checkbox" name="support_type[]" value="Stress"> Stress Reduction<br>
+  </label><br>
+
+  <label>
+    What should we avoid?<br>
+    <textarea name="avoid_topics" rows="3"></textarea>
+  </label><br><br>
+
+  <label>
+    Preferred message style:<br>
+    <input type="checkbox" name="message_style[]" value="Professional"> Professional<br>
+    <input type="checkbox" name="message_style[]" value="Friendly"> Friendly<br>
+    <input type="checkbox" name="message_style[]" value="Motivational"> Motivational<br>
+    <input type="checkbox" name="message_style[]" value="Calm"> Calm<br>
+  </label><br>
+
+  <label>
+    Preferred time:<br>
+    <input type="text" name="message_time">
+  </label><br><br>
+
+  <label>
+    One thing you want to improve most:<br>
+    <textarea name="core_goal" rows="3"></textarea>
+  </label><br><br>
+
+  <button type="submit">Start My Daily Support</button>
+
+</form>
+
+</body>
+</html>
