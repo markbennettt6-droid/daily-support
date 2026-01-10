@@ -1,254 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Daily Human Support — Personal & Team Guidance That Stands With You</title>
-  <meta name="description" content="Deep, personal, daily support for individuals, leaders, and teams. Emotional clarity, professional growth, and human guidance — delivered privately and consistently.">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>You Are Not Alone — Daily Support by Mark Bennett</title>
+  <meta name="description" content="A quiet, private daily companion for your professional life, emotional world, and inner peace — crafted just for you.">
   <style>
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #ffffff;
-      color: #111;
-      line-height: 1.9;
-      padding: 50px 24px;
-      max-width: 900px;
-      margin: auto;
-      font-size: 18px;
+      background: #fcfdfd;
+      color: #1a202c;
+      line-height: 1.78;
+      padding: 3rem 1.5rem;
+      max-width: 780px;
+      margin: 0 auto;
+      font-size: 1.06rem;
     }
 
     h1 {
-      font-size: 3.2rem;
+      font-size: 2.4rem;
       font-weight: 700;
-      line-height: 1.25;
-      margin-bottom: 50px;
-      color: #1d72b8;
-    }
-
-    h2 {
-      font-size: 2rem;
-      font-weight: 700;
-      margin-top: 60px;
-      margin-bottom: 28px;
-      color: #222;
+      margin-bottom: 2.2rem;
+      color: #1e293b;
+      text-align: center;
+      line-height: 1.3;
     }
 
     p {
-      margin: 22px 0;
+      margin: 1.6rem 0;
+      color: #334155;
     }
 
-    ul {
-      margin: 20px 0 20px 24px;
-    }
-
-    li {
-      margin: 12px 0;
-    }
-
-    .highlight {
-      background: #f2f6fb;
-      padding: 36px;
-      border-radius: 16px;
-      margin: 56px 0;
-      font-size: 19px;
-      border-left: 6px solid #1d72b8;
-    }
-
-    .divider {
-      margin: 72px 0;
-      border-top: 1px solid #eee;
-    }
-
-    .quiet {
+    .quiet-box {
+      background: #f8fafc;
+      border-left: 4px solid #cbdff5;
+      padding: 1.8rem;
+      margin: 2.4rem 0;
+      border-radius: 0 10px 10px 0;
       font-style: italic;
-      color: #555;
-      margin-top: 72px;
-      padding-top: 32px;
-      border-top: 1px solid #eee;
-      font-size: 19px;
+      color: #2d3748;
     }
 
     .buttons {
-      margin-top: 120px;
+      margin-top: 3.5rem;
+      padding-top: 2.8rem;
+      border-top: 1px solid #e2e8f0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
     }
 
-    .button {
-      display: block;
-      text-align: center;
-      text-decoration: none;
-      padding: 16px 36px;
-      border-radius: 10px;
+    .btn {
+      display: inline-block;
+      padding: 10px 26px;
+      font-size: 0.95rem;
       font-weight: 600;
-      font-size: 18px;
-      transition: all 0.3s ease;
-      color: #fff;
-      margin: 12px auto;
-      width: 260px;
+      text-decoration: none;
+      border-radius: 28px;
+      transition: all 0.22s ease;
+      min-width: 230px;
+      text-align: center;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
     }
 
-    .personal {
-      background: linear-gradient(135deg, #1d72b8, #2a9df4);
+    .btn-individual {
+      background: #dcfce7;
+      color: #166534;
+    }
+    .btn-individual:hover {
+      background: #bbf7d0;
+      transform: translateY(-1px);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
-    .personal:hover {
-      transform: translateY(-2px);
-      opacity: 0.95;
+    .btn-team {
+      background: #dbeafe;
+      color: #1d4ed8;
+    }
+    .btn-team:hover {
+      background: #bfdbfe;
+      transform: translateY(-1px);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
-    .team {
-      background: linear-gradient(135deg, #e63946, #ff6b6b);
+    .btn-onboarding {
+      background: #fde0e6;
+      color: #be123c;
     }
-
-    .team:hover {
-      transform: translateY(-2px);
-      opacity: 0.95;
-    }
-
-    .onboarding {
-      background: linear-gradient(135deg, #f4a261, #ffd166);
-      color: #111;
-    }
-
-    .onboarding:hover {
-      transform: translateY(-2px);
-      opacity: 0.95;
+    .btn-onboarding:hover {
+      background: #fbcfe8;
+      transform: translateY(-1px);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
     footer {
-      margin-top: 120px;
-      color: #777;
-      font-size: 15px;
+      margin-top: 3.2rem;
+      color: #64748b;
+      font-size: 0.92rem;
       text-align: center;
-      line-height: 1.7;
+      line-height: 1.6;
     }
 
-    blockquote {
-      font-style: italic;
-      background: #f9f9f9;
-      padding: 20px 28px;
-      border-left: 4px solid #1d72b8;
-      margin: 24px 0;
-      border-radius: 10px;
-      color: #333;
+    @media (max-width: 520px) {
+      .btn {
+        width: 92%;
+        padding: 11px 0;
+      }
     }
   </style>
 </head>
-
 <body>
 
 <h1>
-You are not behind.<br>
-You are not failing.<br>
-You are carrying more than anyone ever taught you to notice, express, or admit — and this is your private space to be truly seen.
+This message found you<br>
+because you’ve been carrying something<br>
+no one else can see.
 </h1>
 
 <p>
-Pause for a moment. Breathe. This is not about tasks, deadlines, or expectations.  
-This is about you — your inner life, your work, your emotions, your relationships.  
-Every thought, worry, or hope you hold here matters.
+Maybe it’s the weight of decisions no one prepared you to make.<br>
+Maybe it’s the silence between “I’m fine” and what you actually feel.<br>
+Maybe it’s the exhaustion of showing up every day while no one asks what it costs you.
 </p>
 
 <p>
-Whether you are an individual seeking steady guidance, a team leader looking for clarity and presence, or a team member wanting personal support — this service meets you exactly where you are, every single day.
+Whoever you are — whether you work alone in a quiet room or lead ten people through uncertainty — this space is not here to fix you.<br>
+It’s here to walk with you.
 </p>
 
-<div class="highlight">
-Each day, you receive a deeply considered private message.<br>
-Not generic advice. Not automated encouragement.<br>
-A message shaped around your reality — your challenges, your achievements, your doubts, your ambitions.<br>
-Human. Personal. Reflective. Supportive.
+<div class="quiet-box">
+Every morning at 7 AM EST, you’ll receive one message.<br>
+Not a list.<br>
+Not a lecture.<br>
+Just one sentence that meets you exactly where you are — emotionally, mentally, practically — and gently helps you take the next step without losing yourself.
 </div>
 
-<h2>For Individual Subscribers</h2>
-
 <p>
-As an individual, you are supported fully — not as a role, not as a job, not as a title.  
-Your daily messages nurture all aspects of your life.
-</p>
-
-<ul>
-  <li><strong>Professional life:</strong> Decision-making, confidence, boundaries, clarity, sustainable performance.</li>
-  <li><strong>Psychological state:</strong> Stress management, emotional balance, mental clarity, self-trust.</li>
-  <li><strong>Emotional life:</strong> Understanding feelings, processing events, reconnecting with yourself.</li>
-</ul>
-
-<p>
-Each message helps you:
-</p>
-
-<ul>
-  <li>Slow down mentally while staying productive.</li>
-  <li>See clearly what drains your energy.</li>
-  <li>Respond thoughtfully rather than react impulsively.</li>
-  <li>Build calm strength instead of forced motivation.</li>
-  <li>Feel accompanied rather than alone.</li>
-</ul>
-
-<p>
-You are not broken. You are human. This is not about fixing you — it’s about support that stands with you every day.
-</p>
-
-<div class="divider"></div>
-
-<h2>For Leaders and Team Subscribers</h2>
-
-<p>
-Leadership can feel lonely. Pressure builds quietly while expectations grow loudly.  
-Teams often struggle silently, and traditional tools cannot meet emotional or personal needs.
+If you’re reading this as an individual, this support will hold space for your whole self:<br>
+— In your **professional life**, it helps you focus on what truly moves the needle, without pretending you have endless energy.<br>
+— In your **emotional world**, it names what you feel but can’t articulate, so you don’t have to carry it alone.<br>
+— In your **relationships and inner life**, it reminds you that rest isn’t laziness, boundaries aren’t selfishness, and slowing down isn’t failure.
 </p>
 
 <p>
-A team subscription supports everyone:
-</p>
-
-<ul>
-  <li><strong>Leaders:</strong> Guidance on clear communication, steady presence, confident decisions, and authentic authority.</li>
-  <li><strong>Team members:</strong> Daily private support that helps them manage stress, stay motivated, and balance personal and professional life.</li>
-</ul>
-
-<p>
-This approach transforms the team environment:  
-Leaders become more respected. Teams become more resilient. Work becomes sustainable, not exhausting.
-</p>
-
-<div class="divider"></div>
-
-<h2>How This Support Works</h2>
-
-<p>
-Messages adapt based on what you share and how your patterns evolve.  
-They are designed to reflect your inner state, gently challenge unhelpful loops, and guide you toward better behavior and clarity — without pressure.
+If you’re a team leader, this isn’t about pushing your team harder. It’s about leading from a place of clarity, not chaos.<br>
+— When you face a tough **decision**, you’ll receive calm framing that cuts through noise.<br>
+— When pressure mounts, you’ll be reminded of your **inner steadiness** — the quiet strength beneath the role.<br>
+— And you’ll learn to **lead without burnout**, because sustainable leadership begins with protecting your own humanity first.
 </p>
 
 <p>
-Every morning becomes a private moment of recalibration — a checkpoint to reconnect with yourself before the world pulls you outward again.
+And if you’re part of a team, this is your permission to be more than your output.<br>
+— Your **daily pressure** won’t be ignored; it will be acknowledged and met with practical relief.<br>
+— Your need for **personal balance** won’t be treated as weakness — it will be honored as essential.<br>
+— And your **performance** will grow not from stress, but from a steady rhythm that respects your limits and your potential.
 </p>
 
-<div class="quiet">
-This is for those tired of noise.<br>
-For those who want clarity, not hype.<br>
-For those who know that quiet, consistent support changes everything.
-</div>
+<p>
+These messages are not generated by an algorithm that guesses who you are.<br>
+They are shaped by what you choose to share — your real schedule, your current struggles, your quiet hopes — and then refined with human care.<br>
+They are private. They are yours. They never leave this space.
+</p>
+
+<p>
+This is not self-improvement as punishment.<br>
+This is companionship as liberation.<br>
+The kind that doesn’t ask you to be more — but helps you carry less.
+</p>
+
+<p>
+You don’t need another tool.<br>
+You need someone who sees you — and says, softly: “I’m here. Let’s go one step at a time.”
+</p>
 
 <div class="buttons">
-  <a href="https://markbennett8.gumroad.com/l/yyjgyc" class="button personal">
-    Individual Support — $30 / month
+  <a href="https://markbennett8.gumroad.com/l/yyjgyc" class="btn btn-individual">
+    Begin Your Personal Support — $30/month
   </a>
-
-  <a href="https://markbennett8.gumroad.com/l/uzkgp" class="button team">
-    Team Support — $250 / month
+  <a href="https://markbennett8.gumroad.com/l/uzkgp" class="btn btn-team">
+    Start Team Support (Up to 10) — $250/month
   </a>
-
-  <a href="onboarding-individual.html" class="button onboarding">
-    Go to Onboarding & Registration
+  <a href="https://daily-support.vercel.app/onboarding.html" class="btn btn-onboarding">
+    Continue to Onboarding Page
   </a>
 </div>
 
 <footer>
-Private. Personal. Human.<br>
-No tracking. No noise. No pressure.<br>
-Support that grows with you and your team, every day, for every challenge.
+No tracking. No performance metrics. No public profiles.<br>
+Just one private message each day — written for you, and only you.
 </footer>
 
 </body>
