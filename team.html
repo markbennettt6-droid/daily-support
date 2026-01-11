@@ -7,226 +7,83 @@
   <meta name="description" content="A private gateway to human-centered daily support for individuals, leaders, and teams. No surveillance. No performance metrics. Just presence.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --bg-dark: #0a0a0d;
-      --text-light: #f8fafc;
-      --text-muted: #cbd5e1;
-      --gold: #d4af37;
-      --card-bg: rgba(20, 20, 30, 0.7);
-      --card-border: #2d2d44;
-    }
-
-    * {
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      background: var(--bg-dark);
-      color: var(--text-light);
-      line-height: 1.8;
-      padding: 3.5rem 1.8rem;
-      max-width: 840px;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #ffffff;
+      color: #111111;
+      line-height: 1.78;
+      padding: 4.4rem 1.9rem 4rem;
+      max-width: 740px;
       margin: 0 auto;
-      font-size: 1.08rem;
-      overflow-x: hidden;
-    }
-
-    @media (prefers-reduced-motion: no-preference) {
-      body {
-        scroll-behavior: smooth;
-      }
-    }
-
-    h1 {
-      font-size: 2.6rem;
-      font-weight: 700;
-      margin-bottom: 2.4rem;
-      color: var(--gold);
-      text-align: center;
-      line-height: 1.25;
-      text-shadow: 0 0 20px rgba(212, 175, 55, 0.15);
-      letter-spacing: -0.02em;
-    }
-
-    p {
-      margin: 1.7rem 0;
-      color: var(--text-muted);
+      font-size: 1.09rem;
       font-weight: 400;
     }
 
-    .quiet-box {
-      background: rgba(26, 26, 36, 0.65);
-      border-left: 4px solid var(--gold);
-      padding: 2rem;
-      margin: 2.6rem 0;
-      border-radius: 0 12px 12px 0;
-      font-style: italic;
-      color: #e2e8f0;
-      backdrop-filter: blur(4px);
-      -webkit-backdrop-filter: blur(4px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    }
-
-    .path {
-      background: var(--card-bg);
-      border-radius: 14px;
-      padding: 2.2rem;
-      margin: 2.8rem 0;
-      border: 1px solid var(--card-border);
-      transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .path::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: linear-gradient(120deg, transparent 0%, rgba(212, 175, 55, 0.03) 100%);
-      opacity: 0;
-      transition: opacity 0.4s ease;
-      pointer-events: none;
-    }
-
-    .path:hover {
-      transform: translateY(-2px);
-      border-color: #3a3a5a;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-    }
-
-    .path:hover::before {
-      opacity: 1;
-    }
-
-    .path h2 {
-      font-size: 1.5rem;
-      margin: 0 0 1.3rem 0;
-      font-weight: 600;
-      color: var(--gold);
-      letter-spacing: -0.01em;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 12px 32px;
-      font-size: 0.99rem;
-      font-weight: 600;
-      text-decoration: none;
-      border-radius: 32px;
-      transition: all 0.28s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-      min-width: 250px;
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 500;
+      margin-bottom: 2.8rem;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
       text-align: center;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-      margin-top: 16px;
-      font-family: inherit;
-      position: relative;
-      overflow: hidden;
-      z-index: 1;
     }
 
-    .btn::after {
+    p {
+      margin: 1.9rem 0;
+    }
+
+    .quiet {
+      font-style: italic;
+      color: #444444;
+      margin: 2.6rem 0;
+      padding: 0.2rem 0;
+      border-left: 1px solid #e0e0e0;
+      padding-left: 1.5rem;
+    }
+
+    a {
+      color: #111111;
+      text-decoration: none;
+      position: relative;
+      font-weight: 500;
+    }
+
+    a::after {
       content: '';
       position: absolute;
-      top: 0;
+      bottom: -2px;
       left: 0;
+      width: 0;
+      height: 1px;
+      background: #111111;
+      transition: width 0.3s ease;
+    }
+
+    a:hover::after {
       width: 100%;
-      height: 100%;
-      background: inherit;
-      opacity: 0.15;
-      z-index: -1;
-    }
-
-    .btn-individual {
-      background: linear-gradient(135deg, #2d5a27, #4ade80);
-      color: #0f172a;
-    }
-    .btn-individual:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 18px rgba(76, 217, 100, 0.4);
-    }
-
-    .btn-leader {
-      background: linear-gradient(135deg, #1e3a8a, #60a5fa);
-      color: white;
-    }
-    .btn-leader:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 18px rgba(96, 165, 250, 0.4);
-    }
-
-    .btn-member {
-      background: linear-gradient(135deg, #7f1d1d, #f87171);
-      color: white;
-    }
-    .btn-member:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 18px rgba(248, 113, 113, 0.4);
-    }
-
-    .btn-welcome {
-      background: linear-gradient(135deg, #7c2d12, #fbbf24);
-      color: #0f172a;
-    }
-    .btn-welcome:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 18px rgba(251, 191, 36, 0.4);
     }
 
     footer {
-      margin-top: 4.2rem;
-      color: #94a3b8;
+      margin-top: 4.6rem;
+      color: #666666;
       font-size: 0.94rem;
       text-align: center;
-      line-height: 1.7;
-      padding-top: 2.4rem;
-      border-top: 1px solid var(--card-border);
+      line-height: 1.72;
+      padding-top: 2.8rem;
+      border-top: 1px solid #f0f0f0;
     }
 
-    /* Mobile Optimization */
-    @media (max-width: 620px) {
+    @media (max-width: 600px) {
       body {
-        padding: 2.8rem 1.5rem;
-        font-size: 1.04rem;
+        padding: 3.6rem 1.7rem 3.2rem;
+        font-size: 1.05rem;
       }
       
       h1 {
         font-size: 2.2rem;
-        line-height: 1.2;
-      }
-      
-      .btn {
-        width: 96%;
-        padding: 13px 0;
-        min-width: auto;
-        font-size: 1.02rem;
-      }
-      
-      .path {
-        padding: 1.9rem;
-      }
-    }
-
-    /* Desktop Cursor Enhancement */
-    @media (min-width: 1024px) {
-      a:hover,
-      .btn:hover {
-        cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%23d4af37' d='M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z'/%3E%3C/svg%3E"), pointer;
-      }
-    }
-
-    /* Accessibility */
-    @media (prefers-contrast: high) {
-      :root {
-        --bg-dark: #000000;
-        --text-light: #ffffff;
-        --card-bg: rgba(30, 30, 40, 0.9);
+        line-height: 1.18;
       }
     }
   </style>
@@ -234,94 +91,302 @@
 <body>
 
 <h1>
-Your team isn’t broken.<br>
-They’re carrying things<br>
-no one ever gave them language for.
+This isn’t onboarding.<br>
+It’s the moment you stop guessing what you need —<br>
+and start receiving it, gently, consistently, and without judgment.
 </h1>
 
 <p>
-Burnout rarely announces itself as collapse.<br>
-More often, it appears as quiet disengagement,<br>
-shorter answers,<br>
-less initiative,<br>
-and the subtle, internal decision to stop caring as deeply as before.
+You’ve already taken the most important step: choosing to be supported.
 </p>
 
 <p>
-Most people — whether working alone or within a team — don’t need more pressure, tools, or motivation.<br>
-They need a place where what’s heavy can be acknowledged —<br>
-without consequence, judgment, or performance review.
-</p>
-
-<div class="quiet-box">
-This service does <strong>not</strong> monitor your team.<br>
-It does <strong>not</strong> report back to leadership.<br>
-It does <strong>not</strong> translate human experience into metrics, charts, or KPIs.<br>
-It exists for one reason only:<br>
-to offer each person a quiet, private human presence —<br>
-so they feel <em>held</em>, not watched.<br>
-Supported, not managed.
-</div>
-
-<p>
-What you’re about to choose isn’t a product. It’s a relationship.<br>
-A daily companion that arrives every morning at 7 AM EST —<br>
-not to add to your list,<br>
-but to help you navigate what’s already on it with clarity, calm, and compassion.
+Not fixed.
 </p>
 
 <p>
-Below are four paths. Each leads to a different kind of support — but all lead to the same truth:<br>
-<strong>You don’t have to carry everything alone.</strong>
+Not optimized.
 </p>
 
-<div class="path">
-  <h2>👤 I’m signing up for myself</h2>
-  <p>If you’re here as an individual, your support will hold space for your whole self:<br>
-  — In your <strong>professional life</strong>, it helps you focus on what truly moves the needle, without pretending you have endless energy.<br>
-  — In your <strong>mental state</strong>, it names the fatigue you can’t explain and offers relief that doesn’t demand more from you.<br>
-  — In your <strong>emotional world</strong>, it reminds you that rest isn’t failure, boundaries aren’t selfishness, and slowing down isn’t falling behind.<br>
-  Your daily message will be crafted from your real schedule, your current stressors, and your deepest intentions — so it feels like it was written just for you.</p>
-  <a href="onboarding-individual.html" class="btn btn-individual">Begin My Personal Onboarding</a>
+<p>
+Not made more productive at the cost of your humanity.
+</p>
+
+<p>
+But supported—in the quiet, steady way that acknowledges how much you’ve been carrying without ever being asked to name it.
+</p>
+
+<p>
+This space exists not to add another layer to your life.
+</p>
+
+<p>
+But to help you uncover what’s already there: your clarity, your resilience, your capacity to move forward without abandoning yourself in the process.
+</p>
+
+<p>
+What follows is not a form to fill out.
+</p>
+
+<p>
+It’s an invitation to begin a relationship—one that adapts to you, not the other way around.
+</p>
+
+<p>
+Every message you receive will be shaped by what you choose to share here.
+</p>
+
+<p>
+Not by algorithms that guess.
+</p>
+
+<p>
+Not by templates that assume.
+</p>
+
+<p>
+But by real human insight that listens, reflects, and walks beside you—especially on the days when the weight feels too heavy to carry alone.
+</p>
+
+<div class="quiet">
+This system doesn’t just send advice.
 </div>
 
-<div class="path">
-  <h2>👥 I’m the team leader</h2>
-  <p>As a leader, you don’t need more pressure to perform. You need clarity to lead with humanity.<br>
-  — When facing tough <strong>decisions</strong>, you’ll receive calm framing that cuts through noise.<br>
-  — When pressure mounts, you’ll be reminded of your <strong>inner steadiness</strong> — the quiet strength beneath the title.<br>
-  — And you’ll learn to <strong>lead without burnout</strong>, because sustainable leadership begins with protecting your own well-being first.<br>
-  Plus, you’ll receive a weekly productivity report that shows what’s energizing your team and what’s silently draining them — so you lead with insight, not guesswork.</p>
-  <a href="onboarding-leader.html" class="btn btn-leader">Start Team Leader Onboarding</a>
+<div class="quiet">
+It learns from you.
 </div>
 
-<div class="path">
-  <h2>🧍 I’ve been invited as a team member</h2>
-  <p>Your leader has already enrolled your team. Now, this is your space to shape your own support:<br>
-  — Your <strong>daily pressure</strong> won’t be ignored; it will be acknowledged and met with practical relief tailored to your role.<br>
-  — Your need for <strong>personal balance</strong> won’t be treated as weakness — it will be honored as essential.<br>
-  — And your <strong>performance</strong> will grow not from stress, but from a steady rhythm that respects your limits and your potential.<br>
-  What you share stays private and shapes only your own daily messages — never reported, never tracked, never used against you.</p>
-  <a href="onboarding-member.html" class="btn btn-member">Complete My Team Member Onboarding</a>
+<div class="quiet">
+It notices patterns in your energy, your language, your priorities.
 </div>
 
-<div class="path">
-  <h2>✨ I just want to understand what comes next</h2>
-  <p>If you’re not ready to fill out a form yet, that’s completely okay.<br>
-  This is a safe space. There’s no rush. No performance expected.<br>
-  Visit the welcome page to see what your first day of support will feel like — and how this journey unfolds, one gentle step at a time.</p>
-  <a href="welcome.html" class="btn btn-welcome">View the Welcome Page</a>
+<div class="quiet">
+It gently reinforces what’s working—your ability to stay calm under pressure, your commitment to integrity, your quiet acts of care that go unnoticed.
+</div>
+
+<div class="quiet">
+And it helps you release what’s draining you—the habit of over-explaining, the fear of disappointing others, the belief that your worth is tied to your output.
+</div>
+
+<div class="quiet">
+All of this happens privately.
+</div>
+
+<div class="quiet">
+No one sees it.
+</div>
+
+<div class="quiet">
+No one scores it.
+</div>
+
+<div class="quiet">
+It belongs to you alone.
 </div>
 
 <p>
-No matter which path you choose, your first message arrives tomorrow at 7 AM EST.<br>
-It won’t ask you to do more.<br>
+If you’re reading this as an individual, you likely know the exhaustion of showing up every day while no one asks what it costs you.
+</p>
+
+<p>
+You may have tried everything—productivity systems, morning routines, time-blocking—but nothing stuck.
+</p>
+
+<p>
+Not because you failed.
+</p>
+
+<p>
+But because no one asked the real question: “What kind of support would actually help you show up as your best self—without losing your peace?”
+</p>
+
+<p>
+That’s the question this service answers.
+</p>
+
+<p>
+Your daily message will be crafted from your real wake-up time, your actual workload, your emotional state, and your top three priorities.
+</p>
+
+<p>
+It won’t demand more from you.
+</p>
+
+<p>
+It will simply help you navigate what’s already on your plate with greater clarity and less internal friction.
+</p>
+
+<p>
+Over time, this becomes more than support—it becomes your compass.
+</p>
+
+<p>
+If you’re a team leader, you carry a different kind of weight.
+</p>
+
+<p>
+You’re expected to be decisive, calm, and inspiring—even when you’re quietly overwhelmed.
+</p>
+
+<p>
+You make decisions that affect people’s livelihoods, yet rarely get asked how you’re holding up.
+</p>
+
+<p>
+This service doesn’t add to your burden.
+</p>
+
+<p>
+It lightens it.
+</p>
+
+<p>
+When you face a tough decision, you’ll receive framing that cuts through noise and helps you choose with confidence, not fear.
+</p>
+
+<p>
+When pressure mounts, you’ll be reminded of your inner steadiness—the quiet strength beneath the title—so you don’t lose yourself in the role.
+</p>
+
+<p>
+And you’ll learn to lead without burnout, because sustainable leadership begins with protecting your own humanity first.
+</p>
+
+<p>
+Plus, you’ll receive a weekly productivity report that reveals what’s energizing your team and what’s silently draining them—so you lead with insight, not guesswork.
+</p>
+
+<p>
+This is how you become the kind of leader people follow not out of obligation, but out of trust.
+</p>
+
+<p>
+And if you’re part of a team, this is your permission to be more than your output.
+</p>
+
+<p>
+Your leader has already enrolled your team because they believe you deserve support—not just as a performer, but as a human being.
+</p>
+
+<p>
+Now, this is your space to shape your own experience.
+</p>
+
+<p>
+Your daily pressure won’t be ignored; it will be acknowledged and met with practical relief tailored to your role.
+</p>
+
+<p>
+Your need for personal balance won’t be treated as weakness—it will be honored as essential to your well-being and performance.
+</p>
+
+<p>
+And your performance will grow not from stress, but from a steady rhythm that respects your limits and your potential.
+</p>
+
+<p>
+What you share stays private and shapes only your own daily messages—never reported, never tracked, never used against you.
+</p>
+
+<p>
+You are not a data point.
+</p>
+
+<p>
+You are a person.
+</p>
+
+<p>
+No matter which path you choose, your first message arrives tomorrow at 7 AM EST.
+</p>
+
+<p>
+It won’t ask you to do more.
+</p>
+
+<p>
 It will simply remind you that you’re not alone.
+</p>
+
+<p>
+And over time, these messages become more than words—they become a quiet presence that returns every morning, offering one clear path forward—not because you failed yesterday, but because you deserve support today.
+</p>
+
+<p>
+To begin shaping your personal support as an individual, please complete your <a href="onboarding-individual.html">individual onboarding</a>.
+</p>
+
+<p>
+This short process helps us understand your real schedule, your current challenges, and your deepest intentions—so your daily messages feel like they were written just for you.
+</p>
+
+<p>
+If you’re the team leader, and you’ve already subscribed to the team plan, please complete the <a href="onboarding-leader.html">team leader onboarding</a>.
+</p>
+
+<p>
+This will allow you to set up personalized support for each team member, receive your weekly productivity report, and schedule your 30-minute onboarding call with Mark Bennett.
+</p>
+
+<p>
+If you’ve been invited as a team member, your leader has already taken care of the subscription.
+</p>
+
+<p>
+Now, to ensure your daily messages reflect your real life—not an idealized version—please complete the <a href="onboarding-member.html">team member onboarding</a>.
+</p>
+
+<p>
+Your input stays private and shapes only your own support.
+</p>
+
+<p>
+And if you’re not ready to fill out any form yet—that’s completely okay.
+</p>
+
+<p>
+This is a safe space.
+</p>
+
+<p>
+There’s no rush.
+</p>
+
+<p>
+No performance expected.
+</p>
+
+<p>
+You may simply <a href="welcome.html">view the welcome page</a> to see what your first day of support will feel like—and how this journey unfolds, one gentle step at a time.
+</p>
+
+<p>
+You don’t need another tool.
+</p>
+
+<p>
+You need someone who sees you—and says, softly: “I’m here. Let’s go one step at a time.”
+</p>
+
+<p>
+That’s what this is.
+</p>
+
+<p>
+Not self-improvement as punishment.
+</p>
+
+<p>
+But companionship as liberation.
+</p>
+
+<p>
+The kind that doesn’t ask you to be more—but helps you carry less.
 </p>
 
 <footer>
 Private. Human. Daily.<br>
-Support that meets you where you are — not where you “should” be.<br>
+Support that meets you where you are—not where you “should” be.<br>
 No tracking. No metrics. No surveillance. Just presence.
 </footer>
 
