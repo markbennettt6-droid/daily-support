@@ -5,78 +5,142 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Your Path Begins Here — Daily Support by Mark Bennett</title>
   <meta name="description" content="A private gateway to human-centered daily support for individuals, leaders, and teams. No surveillance. No performance metrics. Just presence.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --bg-dark: #0a0a0d;
+      --text-light: #f8fafc;
+      --text-muted: #cbd5e1;
+      --gold: #d4af37;
+      --card-bg: rgba(20, 20, 30, 0.7);
+      --card-border: #2d2d44;
+    }
+
+    * {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
     body {
-      font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
-      background: #0a0a0d;
-      color: #f8fafc;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-light);
       line-height: 1.8;
       padding: 3.5rem 1.8rem;
       max-width: 840px;
       margin: 0 auto;
       font-size: 1.08rem;
+      overflow-x: hidden;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      body {
+        scroll-behavior: smooth;
+      }
     }
 
     h1 {
       font-size: 2.6rem;
       font-weight: 700;
       margin-bottom: 2.4rem;
-      color: #d4af37;
+      color: var(--gold);
       text-align: center;
       line-height: 1.25;
       text-shadow: 0 0 20px rgba(212, 175, 55, 0.15);
+      letter-spacing: -0.02em;
     }
 
     p {
       margin: 1.7rem 0;
-      color: #e2e8f0;
+      color: var(--text-muted);
+      font-weight: 400;
     }
 
     .quiet-box {
-      background: rgba(26, 26, 36, 0.6);
-      border-left: 4px solid #d4af37;
+      background: rgba(26, 26, 36, 0.65);
+      border-left: 4px solid var(--gold);
       padding: 2rem;
       margin: 2.6rem 0;
       border-radius: 0 12px 12px 0;
       font-style: italic;
-      color: #cbd5e1;
-      backdrop-filter: blur(2px);
+      color: #e2e8f0;
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     }
 
     .path {
-      background: rgba(20, 20, 30, 0.7);
+      background: var(--card-bg);
       border-radius: 14px;
       padding: 2.2rem;
       margin: 2.8rem 0;
-      border: 1px solid #2d2d44;
-      transition: all 0.3s ease;
+      border: 1px solid var(--card-border);
+      transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .path::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(120deg, transparent 0%, rgba(212, 175, 55, 0.03) 100%);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      pointer-events: none;
     }
 
     .path:hover {
-      background: rgba(25, 25, 38, 0.8);
+      transform: translateY(-2px);
       border-color: #3a3a5a;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    .path:hover::before {
+      opacity: 1;
     }
 
     .path h2 {
       font-size: 1.5rem;
       margin: 0 0 1.3rem 0;
       font-weight: 600;
-      color: #d4af37;
+      color: var(--gold);
+      letter-spacing: -0.01em;
     }
 
     .btn {
       display: inline-block;
-      padding: 11px 30px;
-      font-size: 0.98rem;
+      padding: 12px 32px;
+      font-size: 0.99rem;
       font-weight: 600;
       text-decoration: none;
-      border-radius: 30px;
-      transition: all 0.25s ease;
+      border-radius: 32px;
+      transition: all 0.28s cubic-bezier(0.25, 0.46, 0.45, 0.94);
       min-width: 250px;
       text-align: center;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
       margin-top: 16px;
       font-family: inherit;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .btn::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: inherit;
+      opacity: 0.15;
+      z-index: -1;
     }
 
     .btn-individual {
@@ -84,8 +148,8 @@
       color: #0f172a;
     }
     .btn-individual:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(76, 217, 100, 0.3);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 18px rgba(76, 217, 100, 0.4);
     }
 
     .btn-leader {
@@ -93,8 +157,8 @@
       color: white;
     }
     .btn-leader:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(96, 165, 250, 0.3);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 18px rgba(96, 165, 250, 0.4);
     }
 
     .btn-member {
@@ -102,8 +166,8 @@
       color: white;
     }
     .btn-member:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(248, 113, 113, 0.3);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 18px rgba(248, 113, 113, 0.4);
     }
 
     .btn-welcome {
@@ -111,25 +175,58 @@
       color: #0f172a;
     }
     .btn-welcome:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(251, 191, 36, 0.3);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 18px rgba(251, 191, 36, 0.4);
     }
 
     footer {
-      margin-top: 4rem;
+      margin-top: 4.2rem;
       color: #94a3b8;
       font-size: 0.94rem;
       text-align: center;
       line-height: 1.7;
-      padding-top: 2.2rem;
-      border-top: 1px solid #2d2d44;
+      padding-top: 2.4rem;
+      border-top: 1px solid var(--card-border);
     }
 
-    @media (max-width: 580px) {
+    /* Mobile Optimization */
+    @media (max-width: 620px) {
+      body {
+        padding: 2.8rem 1.5rem;
+        font-size: 1.04rem;
+      }
+      
+      h1 {
+        font-size: 2.2rem;
+        line-height: 1.2;
+      }
+      
       .btn {
-        width: 94%;
-        padding: 12px 0;
+        width: 96%;
+        padding: 13px 0;
         min-width: auto;
+        font-size: 1.02rem;
+      }
+      
+      .path {
+        padding: 1.9rem;
+      }
+    }
+
+    /* Desktop Cursor Enhancement */
+    @media (min-width: 1024px) {
+      a:hover,
+      .btn:hover {
+        cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%23d4af37' d='M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z'/%3E%3C/svg%3E"), pointer;
+      }
+    }
+
+    /* Accessibility */
+    @media (prefers-contrast: high) {
+      :root {
+        --bg-dark: #000000;
+        --text-light: #ffffff;
+        --card-bg: rgba(30, 30, 40, 0.9);
       }
     }
   </style>
@@ -229,4 +326,4 @@ No tracking. No metrics. No surveillance. Just presence.
 </footer>
 
 </body>
-                                         </html>
+  </html>
