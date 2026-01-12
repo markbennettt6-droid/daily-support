@@ -1,283 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>You Are Seen — Daily Support Tailored Just for You</title>
-  <meta name="description" content="A private, human-centered daily companion for individuals, team leaders, and team members. Not advice. Not pressure. Just steady support, every morning.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<title>You Are Seen — Daily Support Tailored Just for You</title>
+<meta name="description" content="A private, human-centered daily companion for individuals, team leaders, and team members. Daily presence, not advice. Just steady support every morning.">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      background: #0a0a0d;
-      color: #f8fafc;
-      line-height: 1.8;
-      padding: 3.5rem 1.8rem;
-      max-width: 900px;
-      margin: 0 auto;
-      font-size: 1.08rem;
-    }
+<style>
+/* ====== Global Styles ====== */
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  transition: all 0.3s ease;
+}
 
-    h1 {
-      font-size: 2.8rem;
-      font-weight: 700;
-      margin-bottom: 2.8rem;
-      color: #d4af37;
-      text-align: center;
-      line-height: 1.25;
-      text-shadow: 0 0 22px rgba(212, 175, 55, 0.15);
-    }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #0a0a0d;
+  color: #f8fafc;
+  line-height: 1.82;
+  padding: 3.5rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  font-size: 1.08rem;
+}
 
-    h2 {
-      font-size: 1.65rem;
-      font-weight: 600;
-      margin: 3rem 0 1.6rem;
-      color: #d4af37;
-    }
+/* ====== Headings ====== */
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2.8rem;
+  color: #d4af37;
+  text-align: center;
+  line-height: 1.22;
+  text-shadow: 0 0 22px rgba(212, 175, 55, 0.18);
+}
 
-    p {
-      margin: 1.7rem 0;
-      color: #e2e8f0;
-    }
+h2 {
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin: 3rem 0 1.6rem;
+  color: #d4af37;
+}
 
-    ul {
-      margin: 1.7rem 0;
-      padding-left: 1.9rem;
-      color: #e2e8f0;
-    }
+/* ====== Paragraphs and Lists ====== */
+p, ul {
+  margin: 1.7rem 0;
+  color: #e2e8f0;
+}
 
-    li {
-      margin: 0.8rem 0;
-    }
+ul {
+  padding-left: 2rem;
+}
 
-    .quiet-box {
-      background: rgba(26, 26, 36, 0.68);
-      border-left: 4px solid #d4af37;
-      padding: 2.2rem;
-      margin: 3rem 0;
-      border-radius: 0 14px 14px 0;
-      font-style: italic;
-      color: #cbd5e1;
-      backdrop-filter: blur(3px);
-    }
+li {
+  margin: 0.8rem 0;
+}
 
-    .divider {
-      margin: 4rem 0;
-      border-top: 1px solid #2d2d44;
-    }
+/* ====== Highlight Boxes ====== */
+.quiet-box {
+  background: rgba(26, 26, 36, 0.68);
+  border-left: 4px solid #d4af37;
+  padding: 2.2rem;
+  margin: 3rem 0;
+  border-radius: 0 14px 14px 0;
+  font-style: italic;
+  color: #cbd5e1;
+  backdrop-filter: blur(3px);
+}
 
-    .btn-group {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      margin: 3.5rem 0;
-      align-items: center;
-    }
+/* ====== Divider ====== */
+.divider {
+  margin: 4rem 0;
+  border-top: 1px solid #2d2d44;
+}
 
-    .btn {
-      display: inline-block;
-      padding: 13px 36px;
-      font-size: 1.03rem;
-      font-weight: 600;
-      text-decoration: none;
-      border-radius: 32px;
-      text-align: center;
-      min-width: 280px;
-      transition: all 0.28s ease;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.25);
-    }
+/* ====== Button Group ====== */
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 3.5rem 0;
+  align-items: center;
+  width: 100%;
+}
 
-    .btn-subscribe {
-      background: linear-gradient(135deg, #2d5a27, #4ade80);
-      color: #0f172a;
-    }
-    .btn-subscribe:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 16px rgba(76, 217, 100, 0.35);
-    }
+/* ====== Buttons ====== */
+.btn {
+  display: inline-block;
+  padding: 14px 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 32px;
+  text-align: center;
+  min-width: 260px;
+  max-width: 92%;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.28);
+  cursor: pointer;
+}
 
-    .btn-team {
-      background: linear-gradient(135deg, #1e3a8a, #60a5fa);
-      color: #ffffff;
-    }
-    .btn-team:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 16px rgba(96, 165, 250, 0.35);
-    }
+.btn-subscribe {
+  background: linear-gradient(135deg, #2d5a27, #4ade80);
+  color: #0f172a;
+}
+.btn-subscribe:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 6px 18px rgba(76, 217, 100, 0.45); }
 
-    .btn-onboarding {
-      background: linear-gradient(135deg, #7c2d12, #fbbf24);
-      color: #0f172a;
-    }
-    .btn-onboarding:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 16px rgba(251, 191, 36, 0.35);
-    }
+.btn-team {
+  background: linear-gradient(135deg, #1e3a8a, #60a5fa);
+  color: #ffffff;
+}
+.btn-team:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 6px 18px rgba(96, 165, 250, 0.45); }
 
-    .btn-individual {
-      background: linear-gradient(135deg, #22c55e, #86efac);
-      color: #0f172a;
-    }
-    .btn-individual:hover {
-      box-shadow: 0 4px 16px rgba(34, 197, 94, 0.35);
-    }
+.btn-individual {
+  background: linear-gradient(135deg, #22c55e, #86efac);
+  color: #0f172a;
+}
+.btn-individual:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 6px 18px rgba(34, 197, 94, 0.45); }
 
-    .btn-leader {
-      background: linear-gradient(135deg, #1e40af, #3b82f6);
-      color: white;
-    }
-    .btn-leader:hover {
-      box-shadow: 0 4px 16px rgba(59, 130, 246, 0.35);
-    }
+.btn-leader {
+  background: linear-gradient(135deg, #1e40af, #3b82f6);
+  color: white;
+}
+.btn-leader:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 6px 18px rgba(59, 130, 246, 0.45); }
 
-    .btn-member {
-      background: linear-gradient(135deg, #b91c1c, #f87171);
-      color: white;
-    }
-    .btn-member:hover {
-      box-shadow: 0 4px 16px rgba(248, 113, 113, 0.35);
-    }
+.btn-member {
+  background: linear-gradient(135deg, #b91c1c, #f87171);
+  color: white;
+}
+.btn-member:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 6px 18px rgba(248, 113, 113, 0.45); }
 
-    footer {
-      margin-top: 4.5rem;
-      color: #94a3b8;
-      font-size: 0.95rem;
-      text-align: center;
-      line-height: 1.72;
-      padding-top: 2.6rem;
-      border-top: 1px solid #2d2d44;
-    }
+.btn-welcome {
+  background: linear-gradient(135deg, #7c2d12, #fbbf24);
+  color: #0f172a;
+}
+.btn-welcome:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 6px 18px rgba(251, 191, 36, 0.45); }
 
-    @media (max-width: 620px) {
-      body { padding: 3rem 1.5rem; font-size: 1.05rem; }
-      h1 { font-size: 2.3rem; }
-      .btn { width: 94%; min-width: auto; padding: 14px 0; font-size: 1.03rem; }
-    }
-  </style>
+/* ====== Footer ====== */
+footer {
+  margin-top: 5rem;
+  color: #94a3b8;
+  font-size: 0.95rem;
+  text-align: center;
+  line-height: 1.72;
+  padding-top: 2.6rem;
+  border-top: 1px solid #2d2d44;
+}
+
+/* ====== Responsive for all devices ====== */
+@media (max-width: 1024px) {
+  h1 { font-size: 2.6rem; }
+  h2 { font-size: 1.55rem; }
+}
+
+@media (max-width: 768px) {
+  body { padding: 3rem 1.5rem; font-size: 1.04rem; }
+  h1 { font-size: 2.4rem; }
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: 2.2rem; }
+  .btn { min-width: auto; font-size: 1rem; width: 94%; padding: 12px 0; }
+}
+</style>
 </head>
-
 <body>
 
 <h1>
-You are not unmotivated.<br>
-You are not failing.<br>
-You are carrying more than most people ever see — and it matters.
+You are seen. You are supported. You are not alone.<br>
+Every day, quietly, someone walks beside you — helping you carry what’s already on your shoulders.
 </h1>
 
 <p>
-Burnout rarely looks like collapse. Most often, it looks like functioning quietly while the weight grows inside.  
-</p>
-
-<p>
-You still show up.<br>
-You still respond.<br>
-You still deliver.<br>
-But something inside you has learned to go silent just to survive the day.
-</p>
-
-<p>
-This page exists for that version of you — the part that keeps moving, not because it’s easy, but because stopping feels impossible.
+This is not advice. Not a productivity hack. Not a system demanding you to do more.<br>
+This is a daily, private, human companion — designed to help you breathe, reflect, and navigate your life with clarity.
 </p>
 
 <div class="quiet-box">
-This is not productivity advice.<br>
-This is not therapy.<br>
-This is not motivation.<br><br>
-It is a private, human, daily companion — designed to help you carry what you’re already carrying, with less weight.
+It meets you where you are — professionally, emotionally, and personally — without judgment or pressure.<br>
+The goal is not to fix you. The goal is to make your daily journey lighter.
 </div>
 
-<h2>Daily Support for Individuals</h2>
-
-<p>
-Your life is multi-dimensional.<br>
-Work, responsibilities, finances, relationships, and an inner world that rarely gets acknowledged — all deserve attention.
-</p>
-
-<p>
-Our support helps you navigate your professional and personal life without pretending you have infinite energy.  
-It respects your real limits, your real schedule, and the fact that focus requires space, not pressure.
-</p>
-
-<p>
-Emotionally, it reminds you:</p>
+<h2>For Individuals</h2>
+<p>Life is complex. Work, personal responsibilities, finances, relationships, and your inner world all intertwine. This support helps you: </p>
 <ul>
-  <li>Rest is not failure.</li>
-  <li>Boundaries are not selfishness.</li>
-  <li>Slowing down is not falling behind.</li>
+  <li>Handle your professional life with awareness and calm.</li>
+  <li>Process emotional weight gently, without shame.</li>
+  <li>Honor your personal and emotional boundaries.</li>
 </ul>
-
-<h2>Support for Team Leaders</h2>
-
 <p>
-Leadership is rarely loud. Most of its weight is carried silently.  
-You make decisions that affect livelihoods, and you absorb pressures so others do not have to.
+Rest is not failure. Slowing down is not falling behind. Boundaries are strength, not weakness.
 </p>
 
-<p>
+<h2>For Team Leaders</h2>
+<p>Leadership carries unseen weight. Decisions affect people’s livelihoods, and you often absorb pressures silently.<br>
 This support helps you:</p>
 <ul>
-  <li>Make decisions from steadiness, not urgency.</li>
-  <li>Stay grounded when everything around you accelerates.</li>
-  <li>Lead without burnout, protecting your humanity first.</li>
+  <li>Stay grounded in your decisions, not reactive to urgency.</li>
+  <li>Lead without losing yourself or burning out.</li>
+  <li>Maintain clarity under constant pressure.</li>
 </ul>
 
-<h2>Support for Team Members</h2>
-
-<p>
-You are more than your output. More than the pressure you can absorb without complaint.  
-Performance grows best when people feel supported, not watched.
-</p>
-
+<h2>For Team Members</h2>
+<p>You are more than your output. You deserve support in navigating daily pressures, maintaining balance, and performing sustainably. This system helps you:</p>
 <ul>
-  <li>Handle daily pressures with clarity.</li>
-  <li>Maintain personal balance without guilt.</li>
-  <li>Perform without exhausting yourself.</li>
+  <li>Handle workload without sacrificing personal well-being.</li>
+  <li>Keep balance and energy without guilt.</li>
+  <li>Grow and perform while staying human.</li>
 </ul>
 
-<h2>Privacy and Human Presence</h2>
-
-<p>
-Nothing here is tracked. Nothing is sold. Nothing is reported.  
-Messages are private, shaped only by what you choose to share.
+<h2>Privacy & Human Presence</h2>
+<p>No tracking. No metrics. No surveillance. Messages are private, shaped only by what you choose to share.<br>
+This is companionship, not oversight.
 </p>
 
 <div class="divider"></div>
 
-<h2>Choose Your Path</h2>
-<p>
-Below are all the ways to begin your journey.  
-Each path is built to support you personally, professionally, and humanly.
-</p>
+<h2>Begin Your Journey</h2>
+<p>Choose your path below — each option designed to meet your needs personally and professionally.</p>
 
 <div class="btn-group">
-  <!-- Subscription Buttons -->
-  <a href="https://markbennett8.gumroad.com/l/yyjgyc" class="btn btn-subscribe">
-    Personal Daily Support — $30 / month
-  </a>
-  <a href="https://markbennett8.gumroad.com/l/uzkgp" class="btn btn-team">
-    Team Support (Up to 10) — $250 / month
-  </a>
-  <a href="team.html" class="btn btn-onboarding">
-    Continue to Onboarding →
-  </a>
-
-  <!-- Data Registration / Welcome Buttons -->
-  <a href="https://daily-support.vercel.app/onboarding-individual.html" class="btn btn-individual">
-    Register Individual Data
-  </a>
-  <a href="https://daily-support.vercel.app/onboarding-leader.html" class="btn btn-leader">
-    Register Team Leader Data
-  </a>
-  <a href="https://daily-support.vercel.app/onboarding-member.html" class="btn btn-member">
-    Register Team Member Data
-  </a>
-  <a href="https://daily-support.vercel.app/welcome.html" class="btn btn-onboarding">
-    View Welcome Page
-  </a>
+  <a href="https://markbennett8.gumroad.com/l/yyjgyc" class="btn btn-subscribe">Personal Daily Support — $30 / month</a>
+  <a href="https://markbennett8.gumroad.com/l/uzkgp" class="btn btn-team">Team Support (Up to 10) — $250 / month</a>
+  <a href="https://daily-support.vercel.app/onboarding-individual.html" class="btn btn-individual">Register Individual Data</a>
+  <a href="https://daily-support.vercel.app/onboarding-leader.html" class="btn btn-leader">Register Team Leader Data</a>
+  <a href="https://daily-support.vercel.app/onboarding-member.html" class="btn btn-member">Register Team Member Data</a>
+  <a href="https://daily-support.vercel.app/welcome.html" class="btn btn-welcome">View Welcome Page</a>
 </div>
 
 <footer>
@@ -286,5 +239,14 @@ Support that meets you where you are — not where you “should” be.<br>
 No tracking. No pressure. No noise. Just presence.
 </footer>
 
+<script>
+  // Ensure all buttons open links properly on mobile, tablet, and desktop
+  document.querySelectorAll('.btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      window.location.href = btn.href;
+    });
+  });
+</script>
+
 </body>
-  </html>
+                                             </html>
