@@ -3,272 +3,291 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-<title>You Are Seen — Daily Support Tailored Just for You</title>
-<meta name="description" content="A private, human-centered daily companion for individuals, team leaders, and team members. Daily presence, not advice. Just steady support every morning.">
+<title>You Are Seen — Daily Human Support</title>
+
+<meta name="description" content="A private, deeply human daily companion for individuals, leaders, and teams. Not advice. Not motivation. Just real support, every day.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-/* ====== Global Styles ====== */
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
-  transition: all 0.3s ease;
 }
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  background: #0a0a0d;
-  color: #f8fafc;
-  line-height: 1.82;
-  padding: 3.5rem 2rem;
+  background: radial-gradient(circle at top, #0f1016, #07080c);
+  color: #f1f5f9;
+  line-height: 1.95;
+  padding: 3.8rem 2rem;
   max-width: 1100px;
   margin: 0 auto;
-  font-size: 1.08rem;
+  font-size: 1.1rem;
 }
 
-/* ====== Headings ====== */
 h1 {
-  font-size: 3rem;
+  font-size: 3.1rem;
   font-weight: 700;
-  margin-bottom: 2.8rem;
-  color: #d4af37;
+  margin-bottom: 3.5rem;
+  color: #e6c676;
   text-align: center;
-  line-height: 1.22;
-  text-shadow: 0 0 22px rgba(212, 175, 55, 0.18);
+  line-height: 1.25;
+  text-shadow: 0 0 26px rgba(230, 198, 118, 0.18);
 }
 
 h2 {
-  font-size: 1.7rem;
+  font-size: 1.85rem;
   font-weight: 600;
-  margin: 3rem 0 1.6rem;
-  color: #d4af37;
+  margin: 4rem 0 2rem;
+  color: #e6c676;
 }
 
-/* ====== Paragraphs and Lists ====== */
-p, ul {
-  margin: 1.7rem 0;
-  color: #e2e8f0;
+p {
+  margin: 2rem 0;
+  color: #e5e7eb;
 }
 
 ul {
+  margin: 2rem 0;
   padding-left: 2rem;
 }
 
 li {
-  margin: 0.8rem 0;
+  margin: 0.9rem 0;
 }
 
-/* ====== Highlight Boxes ====== */
 .quiet-box {
-  background: rgba(26, 26, 36, 0.68);
-  border-left: 4px solid #d4af37;
-  padding: 2.2rem;
-  margin: 3rem 0;
-  border-radius: 0 14px 14px 0;
+  background: rgba(22, 23, 34, 0.78);
+  border-left: 4px solid #e6c676;
+  padding: 2.8rem;
+  margin: 3.8rem 0;
+  border-radius: 0 18px 18px 0;
+  color: #cbd5f5;
   font-style: italic;
-  color: #cbd5e1;
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(6px);
 }
 
-/* ====== Divider ====== */
 .divider {
-  margin: 4rem 0;
-  border-top: 1px solid #2d2d44;
+  margin: 5rem 0;
+  border-top: 1px solid #2b2d3f;
 }
 
-/* ====== Button Group ====== */
 .btn-group {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  margin: 3.5rem 0;
+  gap: 18px;
+  margin: 4.5rem 0;
   align-items: center;
-  width: 100%;
 }
 
-/* ====== Buttons ====== */
 .btn {
   display: inline-block;
-  padding: 14px 0;
+  padding: 16px 0;
   font-size: 1.05rem;
   font-weight: 600;
   text-decoration: none;
-  border-radius: 32px;
+  border-radius: 40px;
   text-align: center;
-  min-width: 260px;
-  max-width: 92%;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.28);
-  cursor: pointer;
+  min-width: 280px;
+  max-width: 94%;
+  box-shadow: 0 6px 22px rgba(0,0,0,0.35);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
 }
 
 .btn-subscribe {
-  background: linear-gradient(135deg, #2d5a27, #4ade80);
-  color: #0f172a;
+  background: linear-gradient(135deg, #2e7d32, #6ee7b7);
+  color: #0b1f14;
 }
-.btn-subscribe:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 6px 18px rgba(76, 217, 100, 0.45); }
 
 .btn-team {
-  background: linear-gradient(135deg, #1e3a8a, #60a5fa);
+  background: linear-gradient(135deg, #1e3a8a, #93c5fd);
   color: #ffffff;
 }
-.btn-team:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 6px 18px rgba(96, 165, 250, 0.45); }
 
 .btn-individual {
-  background: linear-gradient(135deg, #22c55e, #86efac);
-  color: #0f172a;
+  background: linear-gradient(135deg, #16a34a, #86efac);
+  color: #0b1f14;
 }
-.btn-individual:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 6px 18px rgba(34, 197, 94, 0.45); }
 
 .btn-leader {
-  background: linear-gradient(135deg, #1e40af, #3b82f6);
-  color: white;
+  background: linear-gradient(135deg, #1d4ed8, #60a5fa);
+  color: #ffffff;
 }
-.btn-leader:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 6px 18px rgba(59, 130, 246, 0.45); }
 
 .btn-member {
-  background: linear-gradient(135deg, #b91c1c, #f87171);
-  color: white;
+  background: linear-gradient(135deg, #b91c1c, #fca5a5);
+  color: #ffffff;
 }
-.btn-member:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 6px 18px rgba(248, 113, 113, 0.45); }
 
 .btn-welcome {
-  background: linear-gradient(135deg, #7c2d12, #fbbf24);
-  color: #0f172a;
+  background: linear-gradient(135deg, #92400e, #fde68a);
+  color: #1a1206;
 }
-.btn-welcome:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 6px 18px rgba(251, 191, 36, 0.45); }
 
-/* ====== Footer ====== */
 footer {
-  margin-top: 5rem;
-  color: #94a3b8;
-  font-size: 0.95rem;
+  margin-top: 6rem;
+  padding-top: 3rem;
+  border-top: 1px solid #2b2d3f;
   text-align: center;
-  line-height: 1.72;
-  padding-top: 2.6rem;
-  border-top: 1px solid #2d2d44;
-}
-
-/* ====== Responsive for all devices ====== */
-@media (max-width: 1024px) {
-  h1 { font-size: 2.6rem; }
-  h2 { font-size: 1.55rem; }
+  color: #9ca3af;
+  font-size: 0.95rem;
+  line-height: 1.75;
 }
 
 @media (max-width: 768px) {
-  body { padding: 3rem 1.5rem; font-size: 1.04rem; }
   h1 { font-size: 2.4rem; }
-}
-
-@media (max-width: 480px) {
-  h1 { font-size: 2.2rem; }
-  .btn { min-width: auto; font-size: 1rem; width: 94%; padding: 12px 0; }
+  body { padding: 3rem 1.5rem; }
 }
 </style>
 </head>
+
 <body>
 
 <h1>
-You are seen. You are supported. You are not alone.<br>
-Every day, quietly, someone walks beside you — helping you carry what’s already on your shoulders.
+You are seen.<br>
+You are supported.<br>
+And you no longer have to carry everything alone.
 </h1>
 
 <p>
-This is not advice. Not a productivity hack. Not a system demanding you to do more.<br>
-This is a daily, private, human companion — designed to help you breathe, reflect, and navigate your life with clarity.
+If you are here, reading this carefully instead of rushing past it,  
+there is a reason — even if you cannot fully explain it yet.
+</p>
+
+<p>
+People who arrive here are rarely careless, weak, or lost.  
+They are often the opposite.
+</p>
+
+<p>
+They are the ones others rely on.  
+The ones who stay functional.  
+The ones who absorb pressure quietly and keep moving forward.
 </p>
 
 <div class="quiet-box">
-It meets you where you are — professionally, emotionally, and personally — without judgment or pressure.<br>
-The goal is not to fix you. The goal is to make your daily journey lighter.
+This page was not written to convince you.<br>
+It was written to recognize you.
 </div>
 
-<!-- ================== ADDED SECTION ================== -->
 <div class="divider"></div>
 
-<h2>Why This Feels Different</h2>
+<h2>This Is Not Advice. And It Is Not Motivation.</h2>
+
 <p>
-Most support systems try to correct behavior.<br>
-This one respects your internal reality first.
+Nothing here will ask you to push harder.  
+Nothing here will tell you to reframe everything positively.  
+Nothing here will suggest that your exhaustion is a mindset problem.
 </p>
 
 <p>
-It does not rush insight.<br>
-It does not demand progress.<br>
-It does not assume you are broken.
+What you are experiencing does not come from weakness.  
+It comes from **carrying responsibility for too long without a place to set it down**.
 </p>
 
-<p>
-That difference is subtle — and powerful.
-</p>
-
-<!-- ================== ORIGINAL CONTENT CONTINUES ================== -->
-
-<h2>For Individuals</h2>
-<p>Life is complex. Work, personal responsibilities, finances, relationships, and your inner world all intertwine. This support helps you: </p>
-<ul>
-  <li>Handle your professional life with awareness and calm.</li>
-  <li>Process emotional weight gently, without shame.</li>
-  <li>Honor your personal and emotional boundaries.</li>
-</ul>
-<p>
-Rest is not failure. Slowing down is not falling behind. Boundaries are strength, not weakness.
-</p>
-
-<!-- ================== ADDED SECTION ================== -->
 <div class="quiet-box">
-Many people realize too late that exhaustion was not the problem.<br>
-Isolation was.
+The goal of this support is not to fix you.<br>
+The goal is to reduce the weight you carry — daily.
 </div>
 
-<h2>For Team Leaders</h2>
-<p>Leadership carries unseen weight. Decisions affect people’s livelihoods, and you often absorb pressures silently.<br>
-This support helps you:</p>
-<ul>
-  <li>Stay grounded in your decisions, not reactive to urgency.</li>
-  <li>Lead without losing yourself or burning out.</li>
-  <li>Maintain clarity under constant pressure.</li>
-</ul>
-
-<!-- ================== ADDED SECTION ================== -->
-<p>
-This space exists so leadership does not have to feel like emotional solitude.
-</p>
-
-<h2>For Team Members</h2>
-<p>You are more than your output. You deserve support in navigating daily pressures, maintaining balance, and performing sustainably. This system helps you:</p>
-<ul>
-  <li>Handle workload without sacrificing personal well-being.</li>
-  <li>Keep balance and energy without guilt.</li>
-  <li>Grow and perform while staying human.</li>
-</ul>
-
-<!-- ================== ADDED SECTION ================== -->
 <div class="divider"></div>
 
-<h2>What Happens When You Join</h2>
+<h2>If You Are an Individual</h2>
+
 <p>
-Nothing dramatic.<br>
-No transformation overnight.
+Your life is not divided neatly into “work” and “personal.”  
+It blends into one continuous stream of responsibility, expectation, and inner negotiation.
 </p>
 
 <p>
-Just a quieter internal dialogue.<br>
-And less weight carried alone.
+You may function well — while internally feeling stretched, tired, or quietly overwhelmed.
 </p>
 
-<h2>Privacy & Human Presence</h2>
-<p>No tracking. No metrics. No surveillance. Messages are private, shaped only by what you choose to share.<br>
-This is companionship, not oversight.
-</p>
+<ul>
+  <li>Support for your professional decisions and daily pressure</li>
+  <li>Support for your emotional and psychological load</li>
+  <li>Support for your personal boundaries and inner stability</li>
+</ul>
+
+<div class="quiet-box">
+You do not need to reach a breaking point to deserve support.
+</div>
 
 <div class="divider"></div>
 
-<h2>Begin Your Journey</h2>
-<p>Choose your path below — each option designed to meet your needs personally and professionally.</p>
+<h2>If You Lead Others</h2>
+
+<p>
+Leadership often looks confident on the surface.  
+Internally, it can feel like constant responsibility with very little room to exhale.
+</p>
+
+<p>
+You carry outcomes, people, risks, and uncertainty — often without sharing any of it.
+</p>
+
+<ul>
+  <li>Support for decision-making without emotional overload</li>
+  <li>Support for internal steadiness under pressure</li>
+  <li>Support for leading without burning yourself out</li>
+</ul>
+
+<div class="quiet-box">
+This is where leadership no longer has to feel emotionally solitary.
+</div>
+
+<div class="divider"></div>
+
+<h2>If You Are Part of a Team</h2>
+
+<p>
+Being reliable can slowly become exhausting.
+</p>
+
+<p>
+You manage deadlines, expectations, comparisons, and performance — while still trying to remain balanced and human.
+</p>
+
+<ul>
+  <li>Support for daily work pressure</li>
+  <li>Support for emotional balance</li>
+  <li>Support for sustainable performance without burnout</li>
+</ul>
+
+<div class="divider"></div>
+
+<h2>How This Support Works</h2>
+
+<p>
+This is not occasional advice.  
+It is not a generic message sent to everyone.
+</p>
+
+<p>
+It is **daily, private, and personal**.
+</p>
+
+<ul>
+  <li>Messages arrive daily</li>
+  <li>They are shaped by what you share</li>
+  <li>They are not mechanical in feeling</li>
+</ul>
+
+<div class="quiet-box">
+The intention is not to change who you are.<br>
+It is to make life feel lighter while you live it.
+</div>
+
+<div class="divider"></div>
+
+<h2>Begin — When You Are Ready</h2>
 
 <div class="btn-group">
   <a href="https://markbennett8.gumroad.com/l/yyjgyc" class="btn btn-subscribe">Personal Daily Support — $30 / month</a>
@@ -281,17 +300,8 @@ This is companionship, not oversight.
 
 <footer>
 Private. Human. Daily.<br>
-Support that meets you where you are — not where you “should” be.<br>
-No tracking. No pressure. No noise. Just presence.
+Support that stays — even when you are quiet.
 </footer>
 
-<script>
-  document.querySelectorAll('.btn').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      window.location.href = btn.href;
-    });
-  });
-</script>
-
 </body>
-</html>
+  </html>
