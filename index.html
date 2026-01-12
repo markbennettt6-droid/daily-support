@@ -1,67 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>You Are Seen, You Are Supported — Daily Human Companion</title>
-  <meta name="description" content="A private, daily human companion designed for individuals, team leaders, and team members. Not advice. Not productivity hacks. Just steady, human presence that meets you exactly where you are.">
-  
-  <!-- Fonts -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>You Are Seen — Daily Support Tailored Just for You</title>
+  <meta name="description" content="A private, human-centered daily companion for individuals, team leaders, and team members. Not advice. Not pressure. Just steady support, every morning.">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
-    /* Basic reset and body */
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       background: #0a0a0d;
       color: #f8fafc;
       line-height: 1.8;
-      padding: 4rem 1.8rem;
+      padding: 3.5rem 1.8rem;
       max-width: 900px;
       margin: 0 auto;
       font-size: 1.08rem;
-      overflow-x: hidden;
     }
 
-    /* Fade-in animations */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(18px);
-      animation: fadeInUp 0.8s forwards;
-    }
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* Header banner */
-    .banner {
-      position: sticky;
-      top: 0;
-      background: rgba(36, 58, 87, 0.9);
-      color: #fbbf24;
-      padding: 0.9rem 1.2rem;
-      text-align: center;
-      font-weight: 600;
-      font-size: 1.05rem;
-      z-index: 100;
-      border-bottom: 1px solid #4ade80;
-      backdrop-filter: blur(5px);
-    }
-
-    /* Main title */
     h1 {
       font-size: 2.8rem;
       font-weight: 700;
-      margin: 2rem 0 2.2rem;
+      margin-bottom: 2.8rem;
       color: #d4af37;
       text-align: center;
       line-height: 1.25;
-      text-shadow: 0 0 20px rgba(212, 175, 55, 0.18);
+      text-shadow: 0 0 22px rgba(212, 175, 55, 0.15);
     }
 
     h2 {
@@ -72,13 +40,13 @@
     }
 
     p {
-      margin: 1.6rem 0;
+      margin: 1.7rem 0;
       color: #e2e8f0;
     }
 
     ul {
-      margin: 1.8rem 0;
-      padding-left: 2rem;
+      margin: 1.7rem 0;
+      padding-left: 1.9rem;
       color: #e2e8f0;
     }
 
@@ -86,177 +54,237 @@
       margin: 0.8rem 0;
     }
 
-    /* Highlighted message boxes */
-    .quiet-box, .quiet {
-      background: rgba(26, 26, 36, 0.7);
+    .quiet-box {
+      background: rgba(26, 26, 36, 0.68);
       border-left: 4px solid #d4af37;
-      padding: 2rem 2.2rem;
-      margin: 2.5rem 0;
+      padding: 2.2rem;
+      margin: 3rem 0;
       border-radius: 0 14px 14px 0;
       font-style: italic;
       color: #cbd5e1;
       backdrop-filter: blur(3px);
-      transition: all 0.3s ease;
     }
 
-    .quiet-box:hover, .quiet:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 18px rgba(212, 175, 55, 0.25);
+    .divider {
+      margin: 4rem 0;
+      border-top: 1px solid #2d2d44;
     }
 
-    /* Buttons */
     .btn-group {
       display: flex;
       flex-direction: column;
       gap: 16px;
-      margin: 3.8rem 0 4rem;
+      margin: 3.5rem 0;
       align-items: center;
     }
 
     .btn {
       display: inline-block;
-      padding: 14px 36px;
-      border-radius: 32px;
+      padding: 13px 36px;
+      font-size: 1.03rem;
       font-weight: 600;
-      font-size: 1rem;
-      min-width: 260px;
-      text-align: center;
       text-decoration: none;
+      border-radius: 32px;
+      text-align: center;
+      min-width: 280px;
       transition: all 0.28s ease;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.25);
-      cursor: pointer;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.25);
     }
 
-    .btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 20px rgba(76, 217, 100, 0.4);
-    }
-
-    .btn-individual {
+    .btn-subscribe {
       background: linear-gradient(135deg, #2d5a27, #4ade80);
       color: #0f172a;
     }
+    .btn-subscribe:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 16px rgba(76, 217, 100, 0.35);
+    }
 
-    .btn-team-leader {
+    .btn-team {
       background: linear-gradient(135deg, #1e3a8a, #60a5fa);
       color: #ffffff;
     }
-
-    .btn-team-member {
-      background: linear-gradient(135deg, #7f1d1d, #f87171);
-      color: #ffffff;
+    .btn-team:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 16px rgba(96, 165, 250, 0.35);
     }
 
     .btn-onboarding {
       background: linear-gradient(135deg, #7c2d12, #fbbf24);
       color: #0f172a;
     }
+    .btn-onboarding:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 16px rgba(251, 191, 36, 0.35);
+    }
 
-    /* Footer */
+    .btn-individual {
+      background: linear-gradient(135deg, #22c55e, #86efac);
+      color: #0f172a;
+    }
+    .btn-individual:hover {
+      box-shadow: 0 4px 16px rgba(34, 197, 94, 0.35);
+    }
+
+    .btn-leader {
+      background: linear-gradient(135deg, #1e40af, #3b82f6);
+      color: white;
+    }
+    .btn-leader:hover {
+      box-shadow: 0 4px 16px rgba(59, 130, 246, 0.35);
+    }
+
+    .btn-member {
+      background: linear-gradient(135deg, #b91c1c, #f87171);
+      color: white;
+    }
+    .btn-member:hover {
+      box-shadow: 0 4px 16px rgba(248, 113, 113, 0.35);
+    }
+
     footer {
-      margin-top: 4rem;
+      margin-top: 4.5rem;
       color: #94a3b8;
       font-size: 0.95rem;
       text-align: center;
-      line-height: 1.7;
-      padding-top: 2.5rem;
+      line-height: 1.72;
+      padding-top: 2.6rem;
       border-top: 1px solid #2d2d44;
     }
 
-    /* Mobile responsiveness */
     @media (max-width: 620px) {
-      body { padding: 3rem 1.4rem; font-size: 1.05rem; }
+      body { padding: 3rem 1.5rem; font-size: 1.05rem; }
       h1 { font-size: 2.3rem; }
-      .btn { width: 94%; padding: 14px 0; min-width: auto; font-size: 1.02rem; }
+      .btn { width: 94%; min-width: auto; padding: 14px 0; font-size: 1.03rem; }
     }
   </style>
 </head>
 
 <body>
 
-<div class="banner fade-in">
-You are seen. You are supported. Every day, private, human, and personal.
-</div>
-
-<h1 class="fade-in">
+<h1>
 You are not unmotivated.<br>
-You are not broken.<br>
-You are carrying more than most people ever see.
+You are not failing.<br>
+You are carrying more than most people ever see — and it matters.
 </h1>
 
-<p class="fade-in">
-Burnout rarely looks like collapse. Most of the time, it looks like functioning quietly, keeping everything together while feeling overwhelmed inside.
+<p>
+Burnout rarely looks like collapse. Most often, it looks like functioning quietly while the weight grows inside.  
 </p>
 
-<p class="fade-in">
-This page exists for you—the real you who keeps moving, not because it’s easy, but because stopping feels impossible.
+<p>
+You still show up.<br>
+You still respond.<br>
+You still deliver.<br>
+But something inside you has learned to go silent just to survive the day.
 </p>
 
-<div class="quiet-box fade-in">
-This is not a productivity hack. Not a checklist. Not advice.  
-It is a **private, human, daily companion** — designed to help you carry what you’re already carrying, with less weight.
+<p>
+This page exists for that version of you — the part that keeps moving, not because it’s easy, but because stopping feels impossible.
+</p>
+
+<div class="quiet-box">
+This is not productivity advice.<br>
+This is not therapy.<br>
+This is not motivation.<br><br>
+It is a private, human, daily companion — designed to help you carry what you’re already carrying, with less weight.
 </div>
 
-<h2 class="fade-in">Support for Individuals</h2>
-<p class="fade-in">
-Your life is multi-dimensional: work, relationships, finances, emotions, and your inner world rarely acknowledged.  
-This support meets all of these aspects gently, humanly, without pressure.
+<h2>Daily Support for Individuals</h2>
+
+<p>
+Your life is multi-dimensional.<br>
+Work, responsibilities, finances, relationships, and an inner world that rarely gets acknowledged — all deserve attention.
 </p>
-<ul class="fade-in">
-  <li>Professional life: Navigate work and expectations without burning out.</li>
-  <li>Emotional health: Honor your feelings, release internal stress.</li>
-  <li>Relationships: Balance personal and professional connections thoughtfully.</li>
+
+<p>
+Our support helps you navigate your professional and personal life without pretending you have infinite energy.  
+It respects your real limits, your real schedule, and the fact that focus requires space, not pressure.
+</p>
+
+<p>
+Emotionally, it reminds you:</p>
+<ul>
+  <li>Rest is not failure.</li>
+  <li>Boundaries are not selfishness.</li>
+  <li>Slowing down is not falling behind.</li>
 </ul>
-<div class="quiet fade-in">
-Rest is not failure. Boundaries are not selfish. Slowing down is not falling behind.
-</div>
 
-<h2 class="fade-in">Support for Team Leaders</h2>
-<p class="fade-in">
-Leading a team comes with unseen pressure. Most of the weight is carried alone.  
-This support is designed to help you:
+<h2>Support for Team Leaders</h2>
+
+<p>
+Leadership is rarely loud. Most of its weight is carried silently.  
+You make decisions that affect livelihoods, and you absorb pressures so others do not have to.
 </p>
-<ul class="fade-in">
+
+<p>
+This support helps you:</p>
+<ul>
   <li>Make decisions from steadiness, not urgency.</li>
-  <li>Remain grounded even when everything accelerates.</li>
-  <li>Lead sustainably without losing your humanity.</li>
+  <li>Stay grounded when everything around you accelerates.</li>
+  <li>Lead without burnout, protecting your humanity first.</li>
 </ul>
-<div class="quiet fade-in">
-Receive insight-driven guidance tailored to your real workload, energy, and team dynamics.
-</div>
 
-<h2 class="fade-in">Support for Team Members</h2>
-<p class="fade-in">
-You are more than your output. Pressure doesn’t define you.  
-This service helps you:
-</p>
-<ul class="fade-in">
-  <li>Handle daily pressure with clarity.</li>
-  <li>Maintain personal balance while performing well.</li>
-  <li>Grow your performance steadily without burnout.</li>
-</ul>
-<div class="quiet fade-in">
-Your contributions are honored. Your limits respected. Your growth supported.
-</div>
+<h2>Support for Team Members</h2>
 
-<h2 class="fade-in">How it Works</h2>
-<p class="fade-in">
-Each morning at 7:00 AM EST, one private message arrives for you — crafted to meet your real-life situation, professionally, emotionally, and personally.  
-It is not automated. It is not generic. It is **crafted humanly** for you.
+<p>
+You are more than your output. More than the pressure you can absorb without complaint.  
+Performance grows best when people feel supported, not watched.
 </p>
 
-<div class="btn-group fade-in">
-  <a href="https://daily-support.vercel.app/onboarding-individual.html" class="btn btn-individual" title="Begin your personal daily support">Individual Daily Support — $30/month</a>
-  <a href="https://daily-support.vercel.app/onboarding-leader.html" class="btn btn-team-leader" title="Set up personalized support for your team">Team Leader Onboarding</a>
-  <a href="https://daily-support.vercel.app/onboarding-member.html" class="btn btn-team-member" title="Complete your personal team member setup">Team Member Onboarding</a>
-  <a href="team.html" class="btn btn-onboarding" title="Continue to the next step in registration">Continue to Onboarding →</a>
+<ul>
+  <li>Handle daily pressures with clarity.</li>
+  <li>Maintain personal balance without guilt.</li>
+  <li>Perform without exhausting yourself.</li>
+</ul>
+
+<h2>Privacy and Human Presence</h2>
+
+<p>
+Nothing here is tracked. Nothing is sold. Nothing is reported.  
+Messages are private, shaped only by what you choose to share.
+</p>
+
+<div class="divider"></div>
+
+<h2>Choose Your Path</h2>
+<p>
+Below are all the ways to begin your journey.  
+Each path is built to support you personally, professionally, and humanly.
+</p>
+
+<div class="btn-group">
+  <!-- Subscription Buttons -->
+  <a href="https://markbennett8.gumroad.com/l/yyjgyc" class="btn btn-subscribe">
+    Personal Daily Support — $30 / month
+  </a>
+  <a href="https://markbennett8.gumroad.com/l/uzkgp" class="btn btn-team">
+    Team Support (Up to 10) — $250 / month
+  </a>
+  <a href="team.html" class="btn btn-onboarding">
+    Continue to Onboarding →
+  </a>
+
+  <!-- Data Registration / Welcome Buttons -->
+  <a href="https://daily-support.vercel.app/onboarding-individual.html" class="btn btn-individual">
+    Register Individual Data
+  </a>
+  <a href="https://daily-support.vercel.app/onboarding-leader.html" class="btn btn-leader">
+    Register Team Leader Data
+  </a>
+  <a href="https://daily-support.vercel.app/onboarding-member.html" class="btn btn-member">
+    Register Team Member Data
+  </a>
+  <a href="https://daily-support.vercel.app/welcome.html" class="btn btn-onboarding">
+    View Welcome Page
+  </a>
 </div>
 
-<footer class="fade-in">
+<footer>
 Private. Human. Daily.<br>
 Support that meets you where you are — not where you “should” be.<br>
-No tracking. No metrics. No surveillance. Just presence.
+No tracking. No pressure. No noise. Just presence.
 </footer>
 
 </body>
-</html>
+  </html>
