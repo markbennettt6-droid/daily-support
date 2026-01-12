@@ -12,125 +12,126 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+/* ====== Global Styles ====== */
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   background: radial-gradient(circle at top, #0f1016, #07080c);
   color: #f1f5f9;
-  line-height: 1.95;
-  padding: 3.8rem 2rem;
+  line-height: 2.05;
+  padding: 4rem 2rem;
   max-width: 1100px;
   margin: 0 auto;
-  font-size: 1.1rem;
+  font-size: 1.12rem;
+  letter-spacing: 0.5px;
 }
 
+/* ====== Headings ====== */
 h1 {
-  font-size: 3.1rem;
+  font-size: 3.2rem;
   font-weight: 700;
-  margin-bottom: 3.5rem;
+  margin-bottom: 4rem;
   color: #e6c676;
   text-align: center;
   line-height: 1.25;
-  text-shadow: 0 0 26px rgba(230, 198, 118, 0.18);
+  text-shadow: 0 0 28px rgba(230,198,118,0.22);
 }
 
 h2 {
-  font-size: 1.85rem;
+  font-size: 1.9rem;
   font-weight: 600;
-  margin: 4rem 0 2rem;
+  margin: 4.5rem 0 2.2rem;
   color: #e6c676;
 }
 
+h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 3rem 0 1.5rem;
+  color: #facc15;
+}
+
+/* ====== Paragraphs ====== */
 p {
-  margin: 2rem 0;
+  margin: 2.2rem 0;
   color: #e5e7eb;
+  line-height: 2.15;
+  letter-spacing: 0.3px;
 }
 
 ul {
-  margin: 2rem 0;
-  padding-left: 2rem;
+  margin: 2.5rem 0;
+  padding-left: 2.5rem;
 }
 
 li {
-  margin: 0.9rem 0;
+  margin: 1rem 0;
+  list-style: disc;
 }
 
+/* ====== Highlight Boxes ====== */
 .quiet-box {
-  background: rgba(22, 23, 34, 0.78);
-  border-left: 4px solid #e6c676;
-  padding: 2.8rem;
-  margin: 3.8rem 0;
-  border-radius: 0 18px 18px 0;
+  background: rgba(22,23,34,0.78);
+  border-left: 5px solid #e6c676;
+  padding: 3rem;
+  margin: 4rem 0;
+  border-radius: 0 20px 20px 0;
   color: #cbd5f5;
   font-style: italic;
   backdrop-filter: blur(6px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+  line-height: 2.05;
 }
 
+/* ====== Divider ====== */
 .divider {
-  margin: 5rem 0;
+  margin: 5.5rem 0;
   border-top: 1px solid #2b2d3f;
 }
 
+/* ====== Buttons ====== */
 .btn-group {
   display: flex;
   flex-direction: column;
-  gap: 18px;
-  margin: 4.5rem 0;
+  gap: 20px;
+  margin: 5rem 0;
   align-items: center;
 }
 
 .btn {
   display: inline-block;
   padding: 16px 0;
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   font-weight: 600;
   text-decoration: none;
-  border-radius: 40px;
+  border-radius: 42px;
   text-align: center;
   min-width: 280px;
   max-width: 94%;
-  box-shadow: 0 6px 22px rgba(0,0,0,0.35);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.36);
   transition: transform .25s ease, box-shadow .25s ease;
 }
 
 .btn:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.44);
 }
 
-.btn-subscribe {
-  background: linear-gradient(135deg, #2e7d32, #6ee7b7);
-  color: #0b1f14;
-}
+/* Buttons Colors */
+.btn-subscribe { background: linear-gradient(135deg, #2e7d32, #6ee7b7); color: #0b1f14; }
+.btn-team { background: linear-gradient(135deg, #1e3a8a, #93c5fd); color: #ffffff; }
+.btn-individual { background: linear-gradient(135deg, #16a34a, #86efac); color: #0b1f14; }
+.btn-leader { background: linear-gradient(135deg, #1d4ed8, #60a5fa); color: #ffffff; }
+.btn-member { background: linear-gradient(135deg, #b91c1c, #fca5a5); color: #ffffff; }
+.btn-welcome { background: linear-gradient(135deg, #92400e, #fde68a); color: #1a1206; }
 
-.btn-team {
-  background: linear-gradient(135deg, #1e3a8a, #93c5fd);
-  color: #ffffff;
-}
-
-.btn-individual {
-  background: linear-gradient(135deg, #16a34a, #86efac);
-  color: #0b1f14;
-}
-
-.btn-leader {
-  background: linear-gradient(135deg, #1d4ed8, #60a5fa);
-  color: #ffffff;
-}
-
-.btn-member {
-  background: linear-gradient(135deg, #b91c1c, #fca5a5);
-  color: #ffffff;
-}
-
-.btn-welcome {
-  background: linear-gradient(135deg, #92400e, #fde68a);
-  color: #1a1206;
-}
-
+/* ====== Footer ====== */
 footer {
   margin-top: 6rem;
   padding-top: 3rem;
@@ -138,18 +139,30 @@ footer {
   text-align: center;
   color: #9ca3af;
   font-size: 0.95rem;
-  line-height: 1.75;
+  line-height: 1.8;
+}
+
+/* ====== Responsive Styles ====== */
+@media (max-width: 1024px) {
+  h1 { font-size: 2.8rem; }
+  h2 { font-size: 1.7rem; }
 }
 
 @media (max-width: 768px) {
-  h1 { font-size: 2.4rem; }
-  body { padding: 3rem 1.5rem; }
+  body { padding: 3rem 1.5rem; font-size: 1.05rem; }
+  h1 { font-size: 2.5rem; }
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: 2.2rem; }
+  .btn { min-width: auto; font-size: 1rem; width: 94%; padding: 12px 0; }
 }
 </style>
 </head>
 
 <body>
 
+<!-- ====== Header & Main Message ====== -->
 <h1>
 You are seen.<br>
 You are supported.<br>
@@ -157,151 +170,212 @@ And you no longer have to carry everything alone.
 </h1>
 
 <p>
-If you are here, reading this carefully instead of rushing past it,  
-there is a reason — even if you cannot fully explain it yet.
+If you are here, reading this slowly and carefully, there is a reason — even if you cannot yet articulate it.  
+This is not accidental. Something inside drew you to read every word.
 </p>
 
 <p>
 People who arrive here are rarely careless, weak, or lost.  
-They are often the opposite.
-</p>
-
-<p>
-They are the ones others rely on.  
-The ones who stay functional.  
-The ones who absorb pressure quietly and keep moving forward.
+They are often the opposite: the ones who function even when their inner world feels heavy.  
+The ones who carry silently, hold responsibility with dignity, and give themselves little space to breathe.
 </p>
 
 <div class="quiet-box">
-This page was not written to convince you.<br>
-It was written to recognize you.
+This page was not written to convince you.  
+It was written to recognize **you** — your burden, your effort, your humanity.
 </div>
 
 <div class="divider"></div>
 
-<h2>This Is Not Advice. And It Is Not Motivation.</h2>
+<!-- ====== Philosophy Section ====== -->
+<h2>This Is Not Advice. This Is Not Motivation.</h2>
 
 <p>
 Nothing here will ask you to push harder.  
-Nothing here will tell you to reframe everything positively.  
-Nothing here will suggest that your exhaustion is a mindset problem.
+Nothing here will tell you to reframe your feelings or pretend everything is fine.  
+Nothing here will claim that your exhaustion is a mindset problem.
 </p>
 
 <p>
 What you are experiencing does not come from weakness.  
-It comes from **carrying responsibility for too long without a place to set it down**.
+It comes from carrying responsibility too long without a place to set it down.
 </p>
 
 <div class="quiet-box">
-The goal of this support is not to fix you.<br>
-The goal is to reduce the weight you carry — daily.
+The purpose of this support is not to fix you.  
+It is to reduce the weight you carry — one day at a time.  
+To make the internal journey lighter while keeping your dignity intact.
 </div>
 
 <div class="divider"></div>
 
+<!-- ====== For Individuals ====== -->
 <h2>If You Are an Individual</h2>
 
 <p>
-Your life is not divided neatly into “work” and “personal.”  
-It blends into one continuous stream of responsibility, expectation, and inner negotiation.
+Life is not divided neatly into work, personal, and social spheres.  
+It flows as one continuous stream of responsibility, expectation, and negotiation with yourself.
 </p>
 
 <p>
-You may function well — while internally feeling stretched, tired, or quietly overwhelmed.
+You may appear fine externally, while internally you process stress, emotion, and pressure that cannot easily be shared.  
+You may feel tired yet keep moving, stretched yet unbroken.
 </p>
 
+<h3>Professional Life Support</h3>
 <ul>
-  <li>Support for your professional decisions and daily pressure</li>
-  <li>Support for your emotional and psychological load</li>
-  <li>Support for your personal boundaries and inner stability</li>
+<li>Help to navigate daily responsibilities and decisions without losing calm.</li>
+<li>Guidance to stay grounded when challenges feel overwhelming.</li>
+<li>Support for maintaining clarity and focus even in moments of internal chaos.</li>
+</ul>
+
+<h3>Emotional & Psychological Support</h3>
+<ul>
+<li>Tools to process emotional weight gently, without shame.</li>
+<li>A safe space to explore your feelings privately.</li>
+<li>Assistance to navigate moments of doubt, stress, or fear with kindness to yourself.</li>
+</ul>
+
+<h3>Personal Life & Boundaries</h3>
+<ul>
+<li>Encouragement to honor your personal boundaries without guilt.</li>
+<li>Strategies to maintain energy and balance day-to-day.</li>
+<li>Support in creating space for reflection, rest, and self-compassion.</li>
 </ul>
 
 <div class="quiet-box">
-You do not need to reach a breaking point to deserve support.
+You do not need to reach a breaking point to deserve support.  
+You deserve it now, daily, personally, and consistently.
 </div>
 
 <div class="divider"></div>
 
+<!-- ====== For Team Leaders ====== -->
 <h2>If You Lead Others</h2>
 
 <p>
-Leadership often looks confident on the surface.  
-Internally, it can feel like constant responsibility with very little room to exhale.
+Leadership often appears confident on the outside.  
+Internally, it can feel like endless negotiation with uncertainty, risk, and emotional weight.
 </p>
 
 <p>
-You carry outcomes, people, risks, and uncertainty — often without sharing any of it.
+You carry outcomes, people, and unseen pressures silently, every day.
 </p>
 
+<h3>Decision-Making Support</h3>
 <ul>
-  <li>Support for decision-making without emotional overload</li>
-  <li>Support for internal steadiness under pressure</li>
-  <li>Support for leading without burning yourself out</li>
+<li>Guidance for grounded choices without emotional overload.</li>
+<li>Support to resist reactive impulses and make conscious decisions.</li>
+<li>Assistance to maintain clarity under constant pressure.</li>
+</ul>
+
+<h3>Internal Steadiness</h3>
+<ul>
+<li>Support to remain centered during difficult or high-stakes situations.</li>
+<li>Tools to manage stress and internal tension effectively.</li>
+<li>Encouragement to honor your limits without feeling weak.</li>
+</ul>
+
+<h3>Leadership Without Burnout</h3>
+<ul>
+<li>Strategies to lead consistently without sacrificing your well-being.</li>
+<li>Support to separate professional responsibilities from personal exhaustion.</li>
+<li>Guidance to sustain performance while remaining human.</li>
 </ul>
 
 <div class="quiet-box">
-This is where leadership no longer has to feel emotionally solitary.
+Leadership does not have to feel emotionally lonely.  
+This space allows your humanity to rest while you continue to lead.
 </div>
 
 <div class="divider"></div>
 
+<!-- ====== For Team Members ====== -->
 <h2>If You Are Part of a Team</h2>
 
 <p>
-Being reliable can slowly become exhausting.
+Being reliable can gradually become exhausting.  
+Deadlines, expectations, comparisons, and performance pressures accumulate silently.
 </p>
 
-<p>
-You manage deadlines, expectations, comparisons, and performance — while still trying to remain balanced and human.
-</p>
-
+<h3>Daily Work Pressure</h3>
 <ul>
-  <li>Support for daily work pressure</li>
-  <li>Support for emotional balance</li>
-  <li>Support for sustainable performance without burnout</li>
+<li>Support to handle workload without compromising personal well-being.</li>
+<li>Help to prioritize tasks while reducing internal stress.</li>
+<li>Guidance to manage external expectations without internal guilt.</li>
 </ul>
 
-<div class="divider"></div>
-
-<h2>How This Support Works</h2>
-
-<p>
-This is not occasional advice.  
-It is not a generic message sent to everyone.
-</p>
-
-<p>
-It is **daily, private, and personal**.
-</p>
-
+<h3>Balance & Energy</h3>
 <ul>
-  <li>Messages arrive daily</li>
-  <li>They are shaped by what you share</li>
-  <li>They are not mechanical in feeling</li>
+<li>Strategies to maintain equilibrium between work and personal life.</li>
+<li>Tools to recover energy consistently without overextending.</li>
+<li>Encouragement to say "no" when necessary, without shame.</li>
+</ul>
+
+<h3>Sustainable Performance</h3>
+<ul>
+<li>Support to grow and improve without burning out.</li>
+<li>Guidance to maintain long-term performance while being human.</li>
+<li>Encouragement to embrace progress rather than perfection.</li>
 </ul>
 
 <div class="quiet-box">
-The intention is not to change who you are.<br>
-It is to make life feel lighter while you live it.
+Being part of a team does not mean losing yourself.  
+This space ensures you stay human while performing at your best.
 </div>
 
 <div class="divider"></div>
 
-<h2>Begin — When You Are Ready</h2>
+<!-- ====== Daily Private Support ====== -->
+<h2>Daily Private Support</h2>
+
+<p>
+Messages are daily, private, and unique to you.  
+They are **not automated**, not generic, and never sent to everyone else.
+</p>
+
+<p>
+Every message is designed to meet your reality today.  
+They help you carry what is heavy, remind you to breathe, and gently guide you through challenges — without judgment.
+</p>
+
+<div class="quiet-box">
+The aim is not to “improve” or “fix” your life.  
+It is to make your daily journey feel lighter while you live it fully.
+</div>
+
+<div class="divider"></div>
+
+<!-- ====== Call to Action ====== -->
+<h2>Begin Your Journey</h2>
+
+<p>
+Choose your path below — each option designed to meet your needs personally, psychologically, and professionally.  
+These are not just subscriptions; they are companions that meet you where you are.
+</p>
 
 <div class="btn-group">
-  <a href="https://markbennett8.gumroad.com/l/yyjgyc" class="btn btn-subscribe">Personal Daily Support — $30 / month</a>
-  <a href="https://markbennett8.gumroad.com/l/uzkgp" class="btn btn-team">Team Support (Up to 10) — $250 / month</a>
-  <a href="https://daily-support.vercel.app/onboarding-individual.html" class="btn btn-individual">Register Individual Data</a>
-  <a href="https://daily-support.vercel.app/onboarding-leader.html" class="btn btn-leader">Register Team Leader Data</a>
-  <a href="https://daily-support.vercel.app/onboarding-member.html" class="btn btn-member">Register Team Member Data</a>
-  <a href="https://daily-support.vercel.app/welcome.html" class="btn btn-welcome">View Welcome Page</a>
+<a href="https://markbennett8.gumroad.com/l/yyjgyc" class="btn btn-subscribe">Personal Daily Support — $30 / month</a>
+<a href="https://markbennett8.gumroad.com/l/uzkgp" class="btn btn-team">Team Support (Up to 10) — $250 / month</a>
+<a href="https://daily-support.vercel.app/onboarding-individual.html" class="btn btn-individual">Register Individual Data</a>
+<a href="https://daily-support.vercel.app/onboarding-leader.html" class="btn btn-leader">Register Team Leader Data</a>
+<a href="https://daily-support.vercel.app/onboarding-member.html" class="btn btn-member">Register Team Member Data</a>
+<a href="https://daily-support.vercel.app/welcome.html" class="btn btn-welcome">View Welcome Page</a>
 </div>
 
 <footer>
 Private. Human. Daily.<br>
-Support that stays — even when you are quiet.
+Support that stays — even when you are quiet.  
+Messages arrive for you personally, daily, and are never generic or automated.
 </footer>
+
+<script>
+document.querySelectorAll('.btn').forEach(btn => {
+btn.addEventListener('click', (e) => {
+window.location.href = btn.href;
+});
+});
+</script>
 
 </body>
   </html>
