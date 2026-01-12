@@ -1,104 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Begin Your Private Support</title>
-  <meta name="description" content="This is not a form. This is the beginning of a private, human relationship — designed to support you across your emotional, professional, and inner life.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Begin Your Private Support</title>
+<meta name="description" content="A deeply personal, private, human-centered support system that meets you where you are in your professional, emotional, and inner life.">
 
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-      background: #ffffff;
-      color: #111;
-      line-height: 1.9;
-      padding: 48px 22px;
-      max-width: 780px;
-      margin: auto;
-      font-size: 18px;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    h1, h2 {
-      font-weight: 600;
-      margin-top: 56px;
-      line-height: 1.4;
-    }
+<style>
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: radial-gradient(circle at top, #0a0a0d, #1a1a26);
+  color: #f8fafc;
+  line-height: 2;
+  padding: 50px 25px;
+  max-width: 900px;
+  margin: auto;
+  font-size: 1.125rem;
+  letter-spacing: 0.4px;
+}
 
-    p {
-      margin: 20px 0;
-    }
+h1 {
+  font-weight: 700;
+  font-size: 2.8rem;
+  margin-top: 60px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #d4af37;
+  text-shadow: 0 0 18px rgba(212,175,55,0.25);
+}
 
-    label {
-      display: block;
-      margin-top: 48px;
-      font-weight: 500;
-    }
+h2 {
+  font-weight: 600;
+  font-size: 2rem;
+  margin-top: 50px;
+  line-height: 1.4;
+  color: #e6c676;
+}
 
-    textarea, input, select {
-      width: 100%;
-      margin-top: 14px;
-      padding: 16px;
-      font-size: 17px;
-      font-family: inherit;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      background: #fff;
-      line-height: 1.6;
-    }
+h3 {
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin-top: 40px;
+  color: #facc15;
+}
 
-    textarea {
-      min-height: 130px;
-    }
+p {
+  margin: 20px 0;
+  line-height: 2.1;
+  color: #e2e8f0;
+}
 
-    .hint {
-      font-size: 15px;
-      color: #555;
-      margin-top: 10px;
-    }
+strong {
+  color: #fef3c7;
+}
 
-    .divider {
-      margin: 72px 0;
-      border-top: 1px solid #eee;
-    }
+label {
+  display: block;
+  margin-top: 50px;
+  font-weight: 500;
+}
 
-    .benefits {
-      background: #fafafa;
-      padding: 34px;
-      border-radius: 14px;
-      margin: 48px 0;
-      font-size: 18px;
-      border-left: 4px solid #2a9d8f;
-    }
+textarea, input, select {
+  width: 100%;
+  margin-top: 14px;
+  padding: 18px;
+  font-size: 1rem;
+  font-family: inherit;
+  border: 1px solid #444;
+  border-radius: 10px;
+  background: #0f111a;
+  color: #f8fafc;
+  line-height: 1.8;
+  transition: all 0.3s ease;
+  resize: vertical;
+}
 
-    .benefits ul {
-      margin: 24px 0;
-      padding-left: 22px;
-    }
+textarea:focus, input:focus, select:focus {
+  outline: none;
+  border-color: #d4af37;
+  box-shadow: 0 0 10px rgba(212,175,55,0.4);
+}
 
-    .benefits li {
-      margin: 14px 0;
-    }
+textarea {
+  min-height: 150px;
+}
 
-    button {
-      margin-top: 56px;
-      padding: 18px 40px;
-      font-size: 19px;
-      background: #000;
-      color: #fff;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      font-weight: 600;
-    }
+.hint {
+  font-size: 0.875rem;
+  color: #a1a1aa;
+  margin-top: 8px;
+  font-style: italic;
+}
 
-    footer {
-      margin-top: 96px;
-      color: #666;
-      font-size: 16px;
-      text-align: center;
-      line-height: 1.7;
-    }
-  </style>
+.char-count {
+  font-size: 0.85rem;
+  color: #cbd5e1;
+  margin-top: 4px;
+  text-align: right;
+}
+
+.divider {
+  margin: 80px 0;
+  border-top: 1px solid #2d2d44;
+}
+
+.benefits {
+  background: rgba(26,26,36,0.85);
+  padding: 40px;
+  border-radius: 16px;
+  margin: 50px 0;
+  border-left: 6px solid #d4af37;
+  font-size: 1rem;
+  line-height: 2.0;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+}
+
+.benefits ul {
+  margin: 30px 0;
+  padding-left: 28px;
+}
+
+.benefits li {
+  margin: 16px 0;
+}
+
+button {
+  margin-top: 60px;
+  padding: 20px 50px;
+  font-size: 1.125rem;
+  background: linear-gradient(135deg, #d4af37, #facc15);
+  color: #0a0a0d;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 0.25s ease;
+}
+
+button:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 6px 20px rgba(212,175,55,0.45);
+}
+
+footer {
+  margin-top: 100px;
+  color: #94a3b8;
+  font-size: 16px;
+  text-align: center;
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  body { padding: 35px 18px; font-size: 1.05rem; }
+  h1 { font-size: 2.4rem; }
+  h2 { font-size: 1.75rem; }
+}
+@media (max-width: 480px) {
+  h1 { font-size: 2.2rem; }
+  textarea, input { padding: 14px; font-size: 0.95rem; }
+  button { padding: 16px 30px; font-size: 1rem; }
+}
+</style>
 </head>
 
 <body>
@@ -106,185 +170,154 @@
 <h1>This is not a form.</h1>
 
 <h2>
-This is the moment you stop carrying everything silently —<br>
-and begin a private, steady relationship with support that is actually built around you.
+You are finally giving yourself permission to be fully seen —<br>
+to share the weight silently carried for far too long.
 </h2>
 
 <p>
-There is nothing to perform here.  
-Nothing to prove.  
-Nothing to optimize.
-</p>
-
-<p>
-No one is watching you.  
-No one is scoring your answers.  
-No one will compare you to anyone else.
-</p>
-
-<p>
-What you write here is private.  
-It will never be used for marketing, profiling, performance tracking, or judgment.
-</p>
-
-<p>
-This space exists for one purpose only:
-</p>
-
-<p>
-<strong>
-To shape the daily messages that will meet you where you actually are —  
-emotionally, mentally, and practically —  
-and help you move forward without abandoning yourself.
-</strong>
+There is nothing to prove here.  
+Nothing to optimize.  
+Nothing to perform.  
+This space exists solely for you, and only for you.
 </p>
 
 <div class="benefits">
-<h3>What this support is designed to do for you</h3>
-
+<h3>How these questions work for you</h3>
 <p>
-Starting tomorrow, you will receive <strong>one private message each day</strong>.
-</p>
-
-<p>
-Not to push you harder.  
-Not to fix you.  
-Not to demand growth.
-</p>
-
-<p>
-But to stand with you — especially on the days you feel tired, uncertain, conflicted, or quietly overwhelmed.
-</p>
-
-<ul>
-  <li><strong>If you forget your value</strong> → the message will reflect it back to you, so you stop over-giving to earn belonging.</li>
-  <li><strong>If your mind feels crowded</strong> → it will help you ground into the next clear, human step.</li>
-  <li><strong>If you’re avoiding a hard conversation</strong> → it will offer language that protects both truth and connection.</li>
-  <li><strong>If you’re burned out but still performing</strong> → it will remind you that exhaustion is not proof of worth.</li>
-  <li><strong>If you lead others</strong> → it will help you lead from calm presence, not pressure or control.</li>
-  <li><strong>If you sell or negotiate</strong> → it will reconnect you to the human need beneath the transaction.</li>
-  <li><strong>If you create</strong> → it will protect your creative energy from urgency and noise.</li>
-</ul>
-
-<p>
-This is not self-care as escape.  
-It is <strong>strategic humanity</strong> —  
-the foundation of sustainable success, meaningful work, and honest relationships.
-</p>
-
-<p>
-To shape this support so it truly fits you, we begin here.
+Each prompt is a gentle invitation.  
+Take a deep breath, notice your body, and respond as if speaking to a trusted companion.  
+There is no judgment. There is no comparison.  
+Everything you write remains private.
 </p>
 </div>
 
 <form method="POST" data-netlify="true" name="onboarding">
-  <input type="hidden" name="form-name" value="onboarding">
+<input type="hidden" name="form-name" value="onboarding">
 
-  <label>
-    1. What part of your life — personal or professional — feels quietly unsustainable right now?
-    <textarea name="change_needed"></textarea>
-  </label>
+<!-- =================== QUESTIONS WITH CHARACTER COUNTERS =================== -->
+<label>
+1. What part of your life — personal or professional — feels quietly unsustainable right now?  
+<span class="hint">(Think about what drains your energy the most daily. How does it affect your focus, your relationships, and your sense of self?)</span>
+<textarea name="change_needed" oninput="updateCount(this)"></textarea>
+<div class="char-count">0 characters | 0 words</div>
+</label>
 
-  <label>
-    2. What pattern drains your energy, even though you keep repeating it?
-    <span class="hint">(for example: over-explaining, saying yes when you mean no, working late to feel useful)</span>
-    <textarea name="repeating_pattern"></textarea>
-  </label>
+<label>
+2. What pattern repeatedly drains your energy, even though you continue it?  
+<span class="hint">(For example: over-explaining, saying yes when you mean no, working extra to feel seen, avoiding conflict.)</span>
+<textarea name="repeating_pattern" oninput="updateCount(this)"></textarea>
+<div class="char-count">0 characters | 0 words</div>
+</label>
 
-  <label>
-    3. What harsh sentence do you tell yourself when progress slows or something falls apart?
-    <textarea name="inner_voice"></textarea>
-  </label>
+<label>
+3. What harsh or critical sentence do you often tell yourself when progress slows or things go wrong?  
+<span class="hint">(Allow yourself to write exactly what you think, as if speaking to your inner voice.)</span>
+<textarea name="inner_voice" oninput="updateCount(this)"></textarea>
+<div class="char-count">0 characters | 0 words</div>
+</label>
 
-  <label>
-    4. What truth about your value do you tend to forget when pressure rises?
-    <textarea name="forgotten_truth"></textarea>
-  </label>
+<label>
+4. What truth about your value do you tend to forget when stress or pressure rises?  
+<textarea name="forgotten_truth" oninput="updateCount(this)"></textarea>
+<div class="char-count">0 characters | 0 words</div>
+</label>
 
-  <label>
-    5. What do you never say out loud — even to the people closest to you at work?
-    <textarea name="unsaid_truth"></textarea>
-  </label>
+<label>
+5. What do you never say out loud — even to the people closest to you at work or home?  
+<span class="hint">(This could be fears, desires, or doubts. Speak honestly to yourself.)</span>
+<textarea name="unsaid_truth" oninput="updateCount(this)"></textarea>
+<div class="char-count">0 characters | 0 words</div>
+</label>
 
-  <label>
-    6. How do you want to *be* at work this month?
-    <span class="hint">(not what you achieve — but how you show up)</span>
-    <textarea name="desired_feeling"></textarea>
-  </label>
+<label>
+6. How do you want to *be* this month at work, at home, or with yourself?  
+<span class="hint">(Focus on your way of showing up, your presence, your inner attitude — not just achievements.)</span>
+<textarea name="desired_feeling" oninput="updateCount(this)"></textarea>
+<div class="char-count">0 characters | 0 words</div>
+</label>
 
-  <label>
-    7. What kind of support would help you lead, sell, create, or collaborate with more clarity and less strain?
-    <textarea name="support_style"></textarea>
-  </label>
+<label>
+7. What kind of support would help you lead, collaborate, create, or communicate with more clarity and less strain?  
+<span class="hint">(Think of emotional, mental, or practical support that would make a real difference.)</span>
+<textarea name="support_style" oninput="updateCount(this)"></textarea>
+<div class="char-count">0 characters | 0 words</div>
+</label>
 
-  <label>
-    8. How should your daily message feel when you read it?
-    <span class="hint">(for example: like a trusted mentor, a steady presence, a quiet anchor)</span>
-    <textarea name="message_feel"></textarea>
-  </label>
+<label>
+8. How should your daily message feel when you read it?  
+<span class="hint">(For example: like a calm guide, a steady presence, a quiet anchor, a trusted mentor.)</span>
+<textarea name="message_feel" oninput="updateCount(this)"></textarea>
+<div class="char-count">0 characters | 0 words</div>
+</label>
 
-  <label>
-    9. What tone should this support never have?
-    <span class="hint">(pushy, sales-driven, robotic, hustle-focused, etc.)</span>
-    <textarea name="red_lines"></textarea>
-  </label>
+<label>
+9. What tone should this support never have?  
+<span class="hint">(Pushy, robotic, sales-driven, judgmental, or hustle-focused.)</span>
+<textarea name="red_lines" oninput="updateCount(this)"></textarea>
+<div class="char-count">0 characters | 0 words</div>
+</label>
 
-  <label>
-    10. What is the one thing you need to protect this month so you can stay whole?
-    <textarea name="protect_this_month"></textarea>
-  </label>
+<label>
+10. What is the one thing you most need to protect this month in order to feel whole and safe?  
+<textarea name="protect_this_month" oninput="updateCount(this)"></textarea>
+<div class="char-count">0 characters | 0 words</div>
+</label>
 
-  <label>
-    11. What usually happens inside you right before you stop trying?
-    <textarea name="before_stopping"></textarea>
-  </label>
+<label>
+11. What usually happens inside you right before you feel like giving up or stopping?  
+<span class="hint">(Describe thoughts, emotions, or bodily sensations honestly.)</span>
+<textarea name="before_stopping" oninput="updateCount(this)"></textarea>
+<div class="char-count">0 characters | 0 words</div>
+</label>
 
-  <label>
-    12. What do you fear you might lose if you actually allow things to improve?
-    <textarea name="fear_of_improvement"></textarea>
-  </label>
+<label>
+12. What do you fear might be lost if you allow things to actually improve?  
+<textarea name="fear_of_improvement" oninput="updateCount(this)"></textarea>
+<div class="char-count">0 characters | 0 words</div>
+</label>
 
-  <label>
-    13. Beyond goals and outcomes — how do you want to feel day to day?
-    <textarea name="how_to_feel"></textarea>
-  </label>
+<label>
+13. Beyond measurable goals, how do you want to feel day-to-day in your work, relationships, and life?  
+<textarea name="how_to_feel" oninput="updateCount(this)"></textarea>
+<div class="char-count">0 characters | 0 words</div>
+</label>
 
-  <label>
-    14. (Optional) One thing you never want us to forget about you
-    <textarea name="never_forget"></textarea>
-  </label>
+<label>
+14. (Optional) One thing you never want us to forget about you — something that captures your essence, values, or ongoing struggle.  
+<textarea name="never_forget" oninput="updateCount(this)"></textarea>
+<div class="char-count">0 characters | 0 words</div>
+</label>
 
-  <div class="divider"></div>
+<div class="divider"></div>
 
-  <h2>A few quiet details — only to support you properly</h2>
+<h2>Some quiet details — only to support you properly</h2>
 
-  <label>
-    What should we call you?
-    <input type="text" name="name">
-    <div class="hint">Your real name, or any name that feels right</div>
-  </label>
+<label>
+Your preferred name
+<input type="text" name="name" placeholder="Your real name or a name you feel safe sharing">
+</label>
 
-  <label>
-    Your email
-    <input type="email" name="email" readonly>
-    <div class="hint">We already have it — this is only confirmation</div>
-  </label>
+<label>
+Email
+<input type="email" name="email" readonly>
+<div class="hint">We already have it — this is only confirmation</div>
+</label>
 
-  <label>
-    Your time zone
-    <input type="text" name="timezone" placeholder="e.g., New York, London, Berlin">
-  </label>
+<label>
+Time zone
+<input type="text" name="timezone" placeholder="e.g., New York, London, Berlin">
+</label>
 
-  <label>
-    When should your message arrive?
-    <select name="delivery_time">
-      <option>Morning (before the day begins)</option>
-      <option>Evening (to reflect and reset)</option>
-      <option>A time I’ll choose later</option>
-    </select>
-  </label>
+<label>
+When should your message arrive?
+<select name="delivery_time">
+<option>Morning (before the day begins)</option>
+<option>Evening (to reflect and reset)</option>
+<option>A time I’ll choose later</option>
+</select>
+</label>
 
-  <button type="submit">Begin your support</button>
+<button type="submit">Begin your private support</button>
 </form>
 
 <footer>
@@ -293,5 +326,14 @@ No automation disguised as intimacy. No surveillance. No agenda.<br>
 Just steady, human support — walking with you from this moment forward.
 </footer>
 
+<script>
+// Function to update character and word count
+function updateCount(el) {
+  const charCount = el.value.length;
+  const wordCount = el.value.trim() === '' ? 0 : el.value.trim().split(/\s+/).length;
+  el.nextElementSibling.innerText = `${charCount} characters | ${wordCount} words`;
+}
+</script>
+
 </body>
-      </html>
+  </html>
