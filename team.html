@@ -3,285 +3,199 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
   <title>Your Team Isn’t Broken — Daily Support by Mark Bennett</title>
   <meta name="description" content="Private, human-centered support for individuals and teams. No surveillance. No performance tracking. Just presence.">
-
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
   <style>
     :root {
-      --bg-main: #0b0b10;
-      --bg-soft: rgba(24,24,36,0.78);
-      --bg-card: rgba(30,30,48,0.85);
-
-      --gold: #d4af37;
-      --gold-glow: rgba(212,175,55,0.18);
-
-      --text-main: #f8fafc;
+      --bg-main: #0a0a0d;
+      --text-light: #f8fafc;
       --text-soft: #cbd5e1;
-      --text-muted: #94a3b8;
-
-      --border-soft: #2f2f48;
-
-      --green: #4ade80;
-      --blue: #60a5fa;
-      --red: #f87171;
-      --amber: #fbbf24;
+      --gold: #d4af37;
+      --gold-glow: rgba(212, 175, 55, 0.18);
+      --border-gold: #2d2d44;
     }
 
     * {
+      margin: 0;
+      padding: 0;
       box-sizing: border-box;
     }
 
     body {
-      margin: 0;
-      font-family: 'Inter', system-ui, sans-serif;
-      background: radial-gradient(circle at top, #151523 0%, var(--bg-main) 45%);
-      color: var(--text-main);
-      line-height: 1.9;
-      padding: 4.5rem 1.8rem;
-    }
-
-    .container {
-      max-width: 1000px;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg-main);
+      color: var(--text-light);
+      line-height: 1.85;
+      padding: 4.2rem 1.8rem;
+      max-width: 840px;
       margin: 0 auto;
+      font-size: 1.09rem;
     }
 
     h1 {
-      text-align: center;
-      font-size: 2.9rem;
+      font-size: 2.6rem;
       font-weight: 700;
+      margin-bottom: 2.6rem;
       color: var(--gold);
+      text-align: center;
       line-height: 1.25;
-      margin-bottom: 3.5rem;
-      text-shadow: 0 0 26px var(--gold-glow);
+      text-shadow: 0 0 22px var(--gold-glow);
     }
 
     h2 {
-      font-size: 1.6rem;
+      font-size: 1.5rem;
       font-weight: 600;
+      margin: 2.8rem 0 1.4rem;
       color: var(--gold);
-      margin-bottom: 1.4rem;
     }
 
     p {
-      color: var(--text-soft);
-      font-size: 1.06rem;
       margin: 1.6rem 0;
+      color: var(--text-soft);
     }
 
     ul {
-      margin: 1.6rem 0;
+      margin: 1.8rem 0;
       padding-left: 1.8rem;
     }
 
     li {
-      margin: 0.8rem 0;
-    }
-
-    .statement {
-      background: var(--bg-soft);
-      border-left: 5px solid var(--gold);
-      padding: 2.8rem 2.6rem;
-      border-radius: 0 18px 18px 0;
-      margin: 4rem 0;
-      backdrop-filter: blur(4px);
-    }
-
-    .statement p {
-      font-style: italic;
-      font-size: 1.05rem;
-    }
-
-    .paths {
-      display: grid;
-      gap: 2.8rem;
-      margin-top: 4.5rem;
-    }
-
-    .path {
-      background: var(--bg-card);
-      border: 1px solid var(--border-soft);
-      border-radius: 20px;
-      padding: 3rem 2.6rem;
+      margin: 0.7rem 0;
+      list-style: none;
       position: relative;
-      transition: all 0.35s ease;
     }
 
-    .path::before {
-      content: "";
+    li::before {
+      content: "•";
+      color: var(--gold);
       position: absolute;
-      inset: 0;
-      background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.05), transparent 70%);
-      opacity: 0;
-      transition: opacity 0.35s ease;
-      border-radius: 20px;
+      left: -1.4rem;
+      font-size: 1.4rem;
+      line-height: 1;
     }
 
-    .path:hover::before {
-      opacity: 1;
+    .divider {
+      margin: 3.6rem 0;
+      border-top: 1px solid var(--border-gold);
     }
 
-    .path:hover {
-      transform: translateY(-5px);
-      border-color: #3c3c62;
-      box-shadow: 0 14px 34px rgba(0,0,0,0.5);
+    .btn-group {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin: 3.8rem 0 3.2rem;
+      align-items: center;
     }
 
     .btn {
       display: inline-block;
-      margin-top: 1.4rem;
-      padding: 15px 36px;
-      font-size: 1rem;
-      font-weight: 600;
-      border-radius: 34px;
+      padding: 12px 32px;
+      background: rgba(212, 175, 55, 0.12);
+      color: var(--text-light);
       text-decoration: none;
-      min-width: 300px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 1rem;
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      transition: all 0.25s ease;
+      min-width: 280px;
       text-align: center;
-      transition: all 0.3s ease;
-      box-shadow: 0 8px 22px rgba(0,0,0,0.4);
     }
 
     .btn:hover {
+      background: rgba(212, 175, 55, 0.2);
       transform: translateY(-2px);
-      box-shadow: 0 14px 30px rgba(0,0,0,0.55);
-    }
-
-    .btn-individual {
-      background: linear-gradient(135deg, #245c35, var(--green));
-      color: #052e16;
-    }
-
-    .btn-leader {
-      background: linear-gradient(135deg, #1e3a8a, var(--blue));
-      color: #ffffff;
-    }
-
-    .btn-member {
-      background: linear-gradient(135deg, #7f1d1d, var(--red));
-      color: #ffffff;
-    }
-
-    .btn-welcome {
-      background: linear-gradient(135deg, #7c2d12, var(--amber));
-      color: #1f1300;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
     }
 
     footer {
-      margin-top: 6rem;
-      padding-top: 2.8rem;
-      border-top: 1px solid var(--border-soft);
+      margin-top: 4rem;
+      color: #94a3b8;
+      font-size: 0.95rem;
       text-align: center;
-      color: var(--text-muted);
-      font-size: 0.96rem;
+      line-height: 1.7;
+      padding-top: 2.4rem;
+      border-top: 1px solid var(--border-gold);
     }
 
-    footer p {
-      margin: 0.6rem 0;
-    }
-
-    @media (max-width: 640px) {
+    @media (max-width: 600px) {
+      body {
+        padding: 3.6rem 1.6rem;
+        font-size: 1.05rem;
+      }
+      
       h1 {
         font-size: 2.2rem;
       }
-
+      
       .btn {
-        width: 100%;
-        min-width: unset;
+        width: 94%;
+        min-width: auto;
+        padding: 13px 0;
       }
     }
   </style>
 </head>
-
 <body>
-  <div class="container">
 
-    <h1>
-      Your team isn’t broken.<br>
-      They’re carrying things no one ever gave them language for.
-    </h1>
+<h1>
+Your team isn’t broken.<br>
+They’re carrying things no one ever gave them language for.
+</h1>
 
-    <p>
-      Burnout rarely announces itself as collapse.<br>
-      More often, it appears as quiet disengagement,<br>
-      shorter answers,<br>
-      less initiative,<br>
-      and the subtle, internal decision to stop caring as deeply as before.
-    </p>
+<p>
+Burnout rarely announces itself as collapse.<br>
+More often, it appears as quiet disengagement,<br>
+shorter answers,<br>
+less initiative,<br>
+and the subtle, internal decision to stop caring as deeply as before.
+</p>
 
-    <p>
-      Most teams don’t need more pressure, tools, or motivation.<br>
-      They need a place where what’s heavy can be acknowledged —<br>
-      without consequence, judgment, or performance review.
-    </p>
+<p>
+Most teams don’t need more pressure, tools, or motivation.<br>
+They need a place where what’s heavy can be acknowledged —<br>
+without consequence, judgment, or performance review.
+</p>
 
-    <div class="statement">
-      <p>
-        This service does <strong>not</strong> monitor your team.<br>
-        It does <strong>not</strong> report back to leadership.<br>
-        It does <<strong>not</strong> translate human experience into metrics, charts, or KPIs.<br>
-        It exists for one reason only:<br>
-        to offer each person a quiet, private human presence —<br>
-        so they feel <em>held</em>, not watched.<br>
-        Supported, not managed.
-      </p>
-    </div>
+<p>
+This service does <strong>not</strong> monitor your team.<br>
+It does <strong>not</strong> report back to leadership.<br>
+It does <strong>not</strong> translate human experience into metrics, charts, or KPIs.<br>
+It exists for one reason only:<br>
+to offer each person a quiet, private human presence —<br>
+so they feel <em>held</em>, not watched.<br>
+Supported, not managed.
+</p>
 
-    <h2>What this will never become</h2>
-    <ul>
-      <li>A performance management tool</li>
-      <li>A surveillance or monitoring system</li>
-      <li>A replacement for real leadership</li>
-      <li>A source of reports, dashboards, or internal visibility</li>
-    </ul>
+<h2>What this will never become</h2>
+<ul>
+  <li>A performance management tool</li>
+  <li>A surveillance or monitoring system</li>
+  <li>A replacement for real leadership</li>
+  <li>A source of reports, dashboards, or internal visibility</li>
+</ul>
 
-    <p>
-      There are no scores.<br>
-      No summaries.<br>
-      No insights sent upstream.<br>
-      This is support without conditions.<br>
-      Care without leverage.<br>
-      Presence without pressure.
-    </p>
+<p>
+There are no scores.<br>
+No summaries.<br>
+No insights sent upstream.<br>
+This is support without conditions.<br>
+Care without leverage.<br>
+Presence without pressure.
+</p>
 
-    <div class="paths">
+<div class="btn-group">
+  <a href="/onboarding-individual.html" class="btn">Begin Individual Onboarding</a>
+  <a href="/onboarding-leader.html" class="btn">Start Team Leader Onboarding</a>
+  <a href="/onboarding-member.html" class="btn">Complete Team Member Onboarding</a>
+  <a href="/welcome.html" class="btn">View Welcome Page</a>
+</div>
 
-      <div class="path">
-        <h2>👤 Begin Individual Onboarding</h2>
-        <a href="/onboarding-individual.html" class="btn btn-individual">
-          Start My Personal Journey
-        </a>
-      </div>
+<footer>
+Private. Human. Daily.<br>
+No tracking. No metrics. No surveillance.
+</footer>
 
-      <div class="path">
-        <h2>👥 Start Team Leader Onboarding</h2>
-        <a href="/onboarding-leader.html" class="btn btn-leader">
-          Begin Leader Setup
-        </a>
-      </div>
-
-      <div class="path">
-        <h2>🧍 Complete Team Member Onboarding</h2>
-        <a href="/onboarding-member.html" class="btn btn-member">
-          Join as Team Member
-        </a>
-      </div>
-
-      <div class="path">
-        <h2>✨ View Welcome Page</h2>
-        <a href="/welcome.html" class="btn btn-welcome">
-          See What Comes Next
-        </a>
-      </div>
-
-    </div>
-
-    <footer>
-      <p>Private • Human • Daily</p>
-      <p>No tracking. No metrics. No surveillance.</p>
-    </footer>
-
-  </div>
 </body>
   </html>
