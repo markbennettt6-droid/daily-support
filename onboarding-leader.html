@@ -4,68 +4,114 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Begin Team Support</title>
-  <meta name="description" content="This is not a performance system. It is a private, grounded space to acknowledge the weight you carry — as a leader, and as a human being responsible for others.">
+  <meta name="description" content="A deeply personal, private, human-centered support system for leaders — helping you and your team navigate pressure, collaboration, and well-being.">
   <style>
     body {
-      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-      background: #fff;
-      color: #111;
-      line-height: 1.8;
-      padding: 40px 20px;
-      max-width: 760px;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: radial-gradient(circle at top, #0a0a0d, #1a1a26);
+      color: #f8fafc;
+      line-height: 2;
+      padding: 50px 25px;
+      max-width: 900px;
       margin: auto;
-      font-size: 18px;
+      font-size: 1.125rem;
+      letter-spacing: 0.4px;
     }
-    h1, h2 {
+    h1 {
+      font-weight: 700;
+      font-size: 2.8rem;
+      margin-top: 60px;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #d4af37;
+      text-shadow: 0 0 18px rgba(212,175,55,0.25);
+    }
+    h2 {
       font-weight: 600;
+      font-size: 2rem;
       margin-top: 50px;
+      line-height: 1.4;
+      color: #e6c676;
     }
-    p { margin: 18px 0; }
+    h3 {
+      font-weight: 500;
+      font-size: 1.5rem;
+      margin-top: 40px;
+      color: #facc15;
+    }
+    p { margin: 20px 0; color: #e2e8f0; }
+    strong { color: #fef3c7; }
     label {
       display: block;
-      margin-top: 40px;
+      margin-top: 50px;
       font-weight: 500;
     }
     textarea, input {
       width: 100%;
-      margin-top: 12px;
-      padding: 14px;
-      font-size: 17px;
+      margin-top: 14px;
+      padding: 16px;
+      font-size: 1rem;
       font-family: inherit;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      background: #fff;
+      border: 1px solid #444;
+      border-radius: 10px;
+      background: #0f111a;
+      color: #f8fafc;
+      line-height: 1.8;
+      transition: all 0.3s ease;
+      resize: vertical;
     }
-    textarea { min-height: 120px; }
-    .hint { font-size: 15px; color: #555; margin-top: 8px; }
-    .divider { margin: 60px 0; border-top: 1px solid #eee; }
+    textarea:focus, input:focus {
+      outline: none;
+      border-color: #d4af37;
+      box-shadow: 0 0 10px rgba(212,175,55,0.4);
+    }
+    textarea { min-height: 150px; }
+    .hint { font-size: 0.875rem; color: #a1a1aa; margin-top: 8px; font-style: italic; }
+    .divider { margin: 80px 0; border-top: 1px solid #2d2d44; }
     .benefits {
-      background: #f9f9f9;
-      padding: 28px;
-      border-radius: 12px;
-      margin: 40px 0;
-      font-size: 18px;
-      border-left: 3px solid #1d3557;
+      background: rgba(26,26,36,0.85);
+      padding: 40px;
+      border-radius: 16px;
+      margin: 50px 0;
+      border-left: 6px solid #d4af37;
+      font-size: 1rem;
+      line-height: 2.0;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.35);
     }
-    .benefits ul { margin: 20px 0; padding-left: 20px; }
-    .benefits li { margin: 12px 0; }
+    .benefits ul { margin: 30px 0; padding-left: 28px; }
+    .benefits li { margin: 16px 0; }
     button {
-      margin-top: 50px;
-      padding: 16px 36px;
-      font-size: 19px;
-      background: #000;
-      color: #fff;
+      margin-top: 60px;
+      padding: 20px 50px;
+      font-size: 1.125rem;
+      background: linear-gradient(135deg, #d4af37, #facc15);
+      color: #0a0a0d;
       border: none;
-      border-radius: 8px;
+      border-radius: 12px;
       cursor: pointer;
-      font-weight: 600;
+      font-weight: 700;
+      transition: all 0.25s ease;
+    }
+    button:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 6px 20px rgba(212,175,55,0.45);
     }
     footer {
-      margin-top: 80px;
-      color: #666;
+      margin-top: 100px;
+      color: #94a3b8;
       font-size: 16px;
       text-align: center;
-      line-height: 1.6;
+      line-height: 1.8;
+    }
+    @media (max-width: 768px) {
+      body { padding: 35px 18px; font-size: 1.05rem; }
+      h1 { font-size: 2.4rem; }
+      h2 { font-size: 1.75rem; }
+    }
+    @media (max-width: 480px) {
+      h1 { font-size: 2.2rem; }
+      textarea, input { padding: 14px; font-size: 0.95rem; }
+      button { padding: 16px 30px; font-size: 1rem; }
     }
   </style>
 </head>
@@ -73,154 +119,152 @@
 
 <h1>This is not a performance tool.</h1>
 <h2>
-This is a quiet, protected space to acknowledge the weight you carry —<br>
-not only as a leader responsible for results,<br>
-but as a human responsible for people.
+A safe, reflective space to explore the weight you carry —<br>
+as a leader responsible for others,<br>
+and as a human being responsible for yourself.
 </h2>
 
 <p>
-Take your time here.<br>
-There is no rush.<br>
-Your answers are private.<br>
-They will never be shared with your team.<br>
+Take a deep breath.  
+There is no hurry.  
+Your words here are for you alone — private, secure, and held.  
+No metrics. No reports. No judgment.
 </p>
 
 <p>
-This space exists for one reason only:<br>
-to shape support that allows your people to show up fully,<br>
-collaborate honestly,<br>
-and perform sustainably —<br>
-so your team’s output can grow without sacrificing their mental health, emotional safety, or sense of meaning.
+This space exists for one purpose only:  
+to shape support that allows your team to show up fully,  
+collaborate honestly,  
+and flourish sustainably —  
+without sacrificing emotional safety, meaning, or human dignity.
 </p>
 
 <div class="benefits">
-<h3>What this support will *actually* change for your team</h3>
+<h3>How this support transforms your leadership and team experience</h3>
 <ul>
-  <li><strong>Reduce silent disengagement</strong> → so meetings become places of presence, not quiet withdrawal.</li>
-  <li><strong>Soften the inner critic</strong> → so people share bold ideas without bracing for shame.</li>
-  <li><strong>Restore energy after wins and losses</strong> → so momentum doesn’t collapse after pressure peaks.</li>
-  <li><strong>Strengthen collaboration</strong> → by helping individuals regulate before reacting.</li>
-  <li><strong>Protect deep focus</strong> → so meaningful work replaces constant task-switching.</li>
-  <li><strong>Reconnect effort with purpose</strong> → so your team sells, builds, or creates from belief — not fear.</li>
+  <li><strong>Reduce quiet disengagement</strong> → so meetings and collaborations become places of authentic presence.</li>
+  <li><strong>Soften the inner critic</strong> → so your team can share ideas boldly without fear of shame.</li>
+  <li><strong>Restore energy after wins or setbacks</strong> → so momentum persists even under pressure.</li>
+  <li><strong>Strengthen connection</strong> → by helping individuals pause and regulate before reacting.</li>
+  <li><strong>Protect focus and creativity</strong> → so deep work replaces endless task-switching.</li>
+  <li><strong>Reconnect effort with purpose</strong> → so your team operates from belief and clarity, not anxiety.</li>
 </ul>
 <p>
-This isn’t “soft.”<br>
-It is <strong>strategic resilience</strong> —<br>
-the often-invisible foundation of consistent revenue, low burnout, strong retention, and real trust.
-</p>
-<p>
-Now, to shape this support so it fits your reality — not a template —
+This isn’t “soft.”  
+It is <strong>strategic, human-centered resilience</strong> —  
+the foundation for low burnout, high trust, and sustainable success.
 </p>
 </div>
 
 <form method="POST" data-netlify="true" name="onboarding-leader">
-  <input type="hidden" name="form-name" value="onboarding-leader">
+<input type="hidden" name="form-name" value="onboarding-leader">
 
-  <label>
-    1. What kind of team are you leading?
-    <span class="hint">(e.g., sales, engineering, client services, executive leadership, creative)</span>
-    <textarea name="team_type"></textarea>
-  </label>
+<!-- =================== PERSONALIZED QUESTIONS =================== -->
+<label>
+1. Describe the kind of team you lead — not just the role, but the energy, personalities, and dynamics.
+<span class="hint">(e.g., sales, engineering, creative, client services, cross-functional, executive leadership)</span>
+<textarea name="team_type"></textarea>
+</label>
 
-  <label>
-    2. What is the biggest unspoken emotional load your team carries that affects performance?
-    <span class="hint">(e.g., fear of missing quota, shame after a lost deal, pressure to always appear “on”)</span>
-    <textarea name="team_load"></textarea>
-  </label>
+<label>
+2. What is the deepest unspoken emotional load your team carries that affects how they show up?
+<span class="hint">(e.g., fear of failure, shame, unspoken pressure to “perform perfectly,” uncertainty about leadership)</span>
+<textarea name="team_load"></textarea>
+</label>
 
-  <label>
-    3. What behaviors quietly undermine collaboration or momentum?
-    <span class="hint">(e.g., silent disagreement, overworking to prove worth, avoiding difficult feedback)</span>
-    <textarea name="undesired_behaviors"></textarea>
-  </label>
+<label>
+3. Which behaviors quietly limit collaboration or block momentum — and how do you notice them inside yourself as a leader?
+<span class="hint">(e.g., overwork, avoidance of difficult conversations, silent disagreement, over-pleasing)</span>
+<textarea name="undesired_behaviors"></textarea>
+</label>
 
-  <label>
-    4. At what moments does your team lose energy, clarity, or alignment?
-    <span class="hint">(e.g., after leadership changes, during quarter-end pressure, long projects)</span>
-    <textarea name="struggle_moments"></textarea>
-  </label>
+<label>
+4. At what moments does your team lose clarity, energy, or alignment — and what do you feel in those moments?
+<span class="hint">(e.g., during transitions, after setbacks, at high-pressure deadlines)</span>
+<textarea name="struggle_moments"></textarea>
+</label>
 
-  <label>
-    5. What do your people stop saying once they say “I’m good”?
-    <textarea name="unspoken_issues"></textarea>
-  </label>
+<label>
+5. What do your people stop saying once they tell you “I’m fine”? What remains unsaid inside them?
+<textarea name="unspoken_issues"></textarea>
+</label>
 
-  <label>
-    6. How do you want your team to *feel* when they collaborate or sell?
-    <span class="hint">(e.g., safe to disagree, energized by challenge, proud of their contribution)</span>
-    <textarea name="team_feel"></textarea>
-  </label>
+<label>
+6. How do you want your team to *feel* when they collaborate, sell, or create together?  
+<span class="hint">(e.g., safe to disagree, energized, proud, supported)</span>
+<textarea name="team_feel"></textarea>
+</label>
 
-  <label>
-    7. What should this support <strong>never</strong> feel like?
-    <span class="hint">(e.g., top-down, corporate, performative, like another HR initiative)</span>
-    <textarea name="red_lines"></textarea>
-  </label>
+<label>
+7. What should this support <strong>never</strong> feel like to you or your team?
+<span class="hint">(e.g., top-down, corporate, performative, another HR initiative, judgmental)</span>
+<textarea name="red_lines"></textarea>
+</label>
 
-  <label>
-    8. What would “success” look like in 90 days — beyond metrics?
-    <span class="hint">(e.g., “They trust each other enough to say ‘I don’t know,’” “They protect their energy without guilt”)</span>
-    <textarea name="success_signal"></textarea>
-  </label>
+<label>
+8. What would “success” look like in 90 days — beyond metrics and numbers?  
+<span class="hint">(e.g., team members trust each other to speak up, protect energy without guilt, feel inspired)</span>
+<textarea name="success_signal"></textarea>
+</label>
 
-  <label>
-    9. Is there anything in your culture we should handle with particular care?
-    <span class="hint">(e.g., high-stakes environment, remote fatigue, post-merger tension)</span>
-    <textarea name="culture_sensitivity"></textarea>
-  </label>
+<label>
+9. Are there any aspects of your company culture that require extra care, sensitivity, or thoughtful handling?  
+<span class="hint">(e.g., high-stakes environments, remote fatigue, post-merger dynamics)</span>
+<textarea name="culture_sensitivity"></textarea>
+</label>
 
-  <label>
-    10. What do you fear your team might lose if they remain in survival mode too long?
-    <textarea name="fear_team_loss"></textarea>
-  </label>
+<label>
+10. What do you fear your team might lose if survival mode continues unchecked?  
+<textarea name="fear_team_loss"></textarea>
+</label>
 
-  <label>
-    11. What truth about your leadership do you tend to forget when pressure is highest?
-    <textarea name="forgotten_leadership_truth"></textarea>
-  </label>
+<label>
+11. What truth about your own leadership do you often forget when pressure is highest — and how does it affect your team?  
+<textarea name="forgotten_leadership_truth"></textarea>
+</label>
 
-  <label>
-    12. What kind of leader do you want to be — not in title, but in presence?
-    <textarea name="leader_presence"></textarea>
-  </label>
+<label>
+12. What kind of leader do you aspire to be — not in title, but in presence, impact, and calmness?  
+<textarea name="leader_presence"></textarea>
+</label>
 
-  <label>
-    13. What would make you genuinely proud of your team this quarter — beyond numbers?
-    <textarea name="proud_of_team"></textarea>
-  </label>
+<label>
+13. What would make you genuinely proud of your team this quarter — beyond numbers, metrics, or KPIs?  
+<textarea name="proud_of_team"></textarea>
+</label>
 
-  <label>
-    14. (Optional) One thing you never want us to forget about your team
-    <textarea name="never_forget_team"></textarea>
-  </label>
+<label>
+14. (Optional) One thing you never want us to forget about your team — their spirit, strengths, or hidden struggles  
+<textarea name="never_forget_team"></textarea>
+</label>
 
-  <div class="divider"></div>
+<div class="divider"></div>
 
-  <h2>Your details (for you only)</h2>
+<h2>Your personal details (kept private)</h2>
 
-  <label>
-    Your name
-    <input type="text" name="name">
-  </label>
+<label>
+Your name
+<input type="text" name="name" placeholder="Your real name or a name you feel comfortable with">
+</label>
 
-  <label>
-    Work email
-    <input type="email" name="email">
-    <div class="hint">We will only contact you regarding this support</div>
-  </label>
+<label>
+Work email
+<input type="email" name="email">
+<div class="hint">We will only contact you regarding this support</div>
+</label>
 
-  <label>
-    Company name
-    <input type="text" name="company">
-  </label>
+<label>
+Company name
+<input type="text" name="company" placeholder="Optional, if you feel comfortable">
+</label>
 
-  <button type="submit">Begin team support</button>
+<button type="submit">Begin team support</button>
 </form>
 
 <footer>
 No dashboards. No tracking. No performative reports.<br>
-Only quiet, consistent support — helping your team achieve more by being more human.
+Only quiet, consistent human support — helping your team thrive by being more human themselves.
 </footer>
 
 </body>
-      </html>
+  </html>
