@@ -1,100 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Welcome — You’ve Just Crossed a Quiet Threshold.</title>
-  <meta name="description" content="You didn’t purchase something. You listened to a quiet inner knowing that you deserve to be seen, supported, and held — not for what you do, but for who you are.">
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-      background: #fff;
-      color: #111;
-      line-height: 1.7;
-      padding: 60px 24px;
-      max-width: 760px;
-      margin: auto;
-      font-size: 20px;
-    }
-    h1 {
-      font-weight: 700;
-      font-size: 2.5rem;
-      margin-top: 60px;
-      line-height: 1.2;
-    }
-    p {
-      margin: 26px 0;
-    }
-    a {
-      color: #000;
-      text-decoration: underline;
-      font-weight: 600;
-    }
-    .ps {
-      margin-top: 44px;
-      padding-top: 32px;
-      border-top: 1px solid #eee;
-      font-size: 18px;
-    }
-    footer {
-      margin-top: 100px;
-      color: #666;
-      font-size: 17px;
-      text-align: center;
-      line-height: 1.6;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome — Your Personal Support Has Begun</title>
+<meta name="description" content="Thank you for trusting us. Your data is safe, and your daily messages are crafted personally by a team of psychologists and behavioral specialists based on your input.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ===== Global Styles ===== */
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  transition: all 0.3s ease;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #0a0a0d;
+  color: #f8fafc;
+  line-height: 1.82;
+  padding: 3.5rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  font-size: 1.08rem;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2.8rem;
+  color: #d4af37;
+  text-align: center;
+  line-height: 1.22;
+  text-shadow: 0 0 22px rgba(212, 175, 55, 0.18);
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 2.5rem 0 1.6rem;
+  color: #d4af37;
+  line-height: 1.3;
+}
+
+p {
+  margin: 1.7rem 0;
+  color: #e2e8f0;
+  font-size: 1.08rem;
+}
+
+a {
+  color: #d4af37;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.quiet-box {
+  background: rgba(26, 26, 36, 0.68);
+  border-left: 4px solid #d4af37;
+  padding: 2.2rem;
+  margin: 3rem 0;
+  border-radius: 0 14px 14px 0;
+  font-style: italic;
+  color: #cbd5e1;
+  backdrop-filter: blur(3px);
+}
+
+.divider {
+  margin: 4rem 0;
+  border-top: 1px solid #2d2d44;
+}
+
+/* ===== Buttons ===== */
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 3.5rem 0;
+  align-items: center;
+  width: 100%;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 32px;
+  text-align: center;
+  min-width: 260px;
+  max-width: 92%;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.28);
+  cursor: pointer;
+}
+
+.btn-onboarding {
+  background: linear-gradient(135deg, #2d5a27, #4ade80);
+  color: #0f172a;
+}
+.btn-onboarding:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 6px 18px rgba(76, 217, 100, 0.45);
+}
+
+/* ===== Footer ===== */
+footer {
+  margin-top: 5rem;
+  color: #94a3b8;
+  font-size: 0.95rem;
+  text-align: center;
+  line-height: 1.72;
+  padding-top: 2.6rem;
+  border-top: 1px solid #2d2d44;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  h1 { font-size: 2.6rem; }
+  h2 { font-size: 1.75rem; }
+}
+@media (max-width: 768px) {
+  body { padding: 3rem 1.5rem; font-size: 1.04rem; }
+  h1 { font-size: 2.4rem; }
+}
+@media (max-width: 480px) {
+  h1 { font-size: 2.2rem; }
+  .btn { min-width: auto; font-size: 1rem; width: 94%; padding: 12px 0; }
+}
+</style>
 </head>
 <body>
 
-<h1>
-Welcome.<br>
-You’ve just crossed a quiet threshold.
-</h1>
+<h1>Welcome, and thank you for your trust.</h1>
 
 <p>
-You didn’t buy a product.<br>
-You didn’t enroll in a program.<br>
-You didn’t add another obligation to an already full life.
+You’ve just taken a step toward a truly private and human-centered support system.<br>
+This is not a product. This is not another subscription.<br>
+This is a space created for you, where every word, every sentence, and every daily message will be shaped personally from what you share.
 </p>
 
-<p>
-Instead, you listened to something quieter — and braver.<br>
-A knowing you may have ignored for a long time:<br>
-that you deserve a companion who truly sees you —<br>
-not for what you achieve,<br>
-not for what you provide,<br>
-but for who you are when the world goes silent.
-</p>
-
-<p>
-Beginning tomorrow, one sentence will arrive in your inbox.<br>
-It will be written with you in mind — not a persona, not a segment, not a profile.<br>
-It will carry no pressure, no expectation, no hidden demand.<br>
-It will ask nothing of you — except honesty, if you choose to offer it.
-</p>
-
-<p>
-This is not self-help.<br>
-This is <strong>self-returning</strong>.<br>
-A gentle re-connection to the parts of you that have been carrying everything alone.<br>
-And it begins now.
-</p>
-
-<footer>
-—<br>
-With quiet respect,<br>
-— The Personal Growth Hub team
-</footer>
-
-<div class="ps">
-<p>
-P.S. If you feel ready to shape this support around your real inner world —<br>
-your thoughts, your fatigue, your hopes, your unspoken weight —<br>
-you can begin here, in your own time:<br>
-<a href="/onboarding">Begin your onboarding</a>
-</p>
+<div class="quiet-box">
+All your inputs, reflections, and thoughts are <strong>completely confidential</strong>.<br>
+They are never shared, sold, or used for any external profiling.<br>
+They exist solely to craft messages written for <strong>you</strong>, by a team of experts in psychology and human behavior.
 </div>
 
+<h2>What you can expect every day</h2>
+
+<p>
+Starting tomorrow, a message will arrive in your inbox, written <strong>specifically for you</strong> — based on the details, reflections, and challenges you provided.<br>
+Each message is: private, human, non-automated, and intended to walk with you — not to push, judge, or demand.
+</p>
+
+<p>
+It’s designed to help you pause, breathe, reflect, and move forward with clarity, across your professional, personal, and emotional life.
+</p>
+
+<div class="quiet-box">
+These messages are not generic. They are shaped by your unique patterns, experiences, and values.<br>
+Our team of specialists analyzes only the information you provide, ensuring that every daily note speaks to your real-life situation.
+</div>
+
+<h2>How this is different</h2>
+
+<p>
+No dashboards. No metrics. No one tracking your behavior.<br>
+No automated advice pretending to understand you.<br>
+No pressure to “perform” or “improve” according to someone else’s standard.
+</p>
+
+<p>
+Instead, you receive daily support that listens to you where you are, reminds you of your value, and helps you carry your load a little more lightly.
+</p>
+
+<h2>Your privacy and safety</h2>
+
+<p>
+Every piece of information you share is protected.<br>
+Every reflection is handled with care.<br>
+You alone control how much or how little you choose to reveal.<br>
+Your journey here is entirely your own.
+</p>
+
+<div class="divider"></div>
+
+<h2>Next step</h2>
+<p>
+When you’re ready, begin your onboarding so your daily messages can start being personalized for you.
+</p>
+
+<div class="btn-group">
+  <a href="/onboarding-individual.html" class="btn btn-onboarding">Begin Your Personal Onboarding</a>
+  <a href="/onboarding-leader.html" class="btn btn-onboarding">Begin Leader Onboarding</a>
+  <a href="/onboarding-member.html" class="btn btn-onboarding">Begin Team Member Onboarding</a>
+  <a href="/onboarding-team.html" class="btn btn-onboarding">Begin Team Onboarding</a>
+  <a href="/onboarding-executive.html" class="btn btn-onboarding">Begin Executive Onboarding</a>
+  <a href="/onboarding-welcome.html" class="btn btn-onboarding">View Welcome Guide</a>
+</div>
+
+<footer>
+Your trust is deeply valued.<br>
+All messages are human-written, personally for you.<br>
+Your data is secure, and your daily support begins now — privately, consistently, and with respect.
+</footer>
+
+<script>
+document.querySelectorAll('.btn').forEach(btn => {
+  btn.addEventListener('click', e => {
+    window.location.href = btn.href;
+  });
+});
+</script>
+
 </body>
-</html>
+  </html>
