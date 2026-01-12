@@ -3,18 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>You Are Not Falling Behind — You’re Carrying Too Much</title>
-
+  <title>You Are Not Falling Behind — Your Personalized Daily Support</title>
   <meta name="description" content="A private, human, daily companion for individuals, leaders, and teams. Not advice. Not pressure. Just steady support, every morning.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     body {
-      font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+      font-family: 'Inter', 'Segoe UI', sans-serif;
       background: #0a0a0d;
       color: #f8fafc;
-      line-height: 1.8;
-      padding: 3.8rem 1.8rem;
-      max-width: 880px;
+      line-height: 1.82;
+      padding: 3.8rem 1.8rem 4rem;
+      max-width: 900px;
       margin: 0 auto;
       font-size: 1.08rem;
     }
@@ -22,11 +25,11 @@
     h1 {
       font-size: 2.7rem;
       font-weight: 700;
-      margin-bottom: 2.6rem;
+      margin-bottom: 2.8rem;
       color: #d4af37;
       text-align: center;
       line-height: 1.25;
-      text-shadow: 0 0 22px rgba(212, 175, 55, 0.15);
+      text-shadow: 0 0 22px rgba(212, 175, 55, 0.18);
     }
 
     h2 {
@@ -42,8 +45,18 @@
       color: #e2e8f0;
     }
 
-    .quiet-box {
-      background: rgba(26, 26, 36, 0.65);
+    ul {
+      margin: 1.8rem 0;
+      padding-left: 2rem;
+      color: #e2e8f0;
+    }
+
+    li {
+      margin: 0.8rem 0;
+    }
+
+    .quiet-box, .quiet {
+      background: rgba(26, 26, 36, 0.7);
       border-left: 4px solid #d4af37;
       padding: 2.2rem;
       margin: 3rem 0;
@@ -58,10 +71,8 @@
       border-top: 1px solid #2d2d44;
     }
 
-    .buttons {
+    .buttons, .btn-group {
       margin-top: 4.5rem;
-      padding-top: 3.2rem;
-      border-top: 1px solid #2d2d44;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -70,15 +81,15 @@
 
     .btn {
       display: inline-block;
-      padding: 11px 34px;
-      font-size: 0.95rem;
+      padding: 12px 34px;
+      font-size: 1rem;
       font-weight: 600;
       text-decoration: none;
-      border-radius: 30px;
-      transition: all 0.25s ease;
+      border-radius: 32px;
       min-width: 260px;
       text-align: center;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+      transition: all 0.28s ease;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.28);
     }
 
     .btn-individual {
@@ -88,7 +99,7 @@
 
     .btn-individual:hover {
       transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(76, 217, 100, 0.35);
+      box-shadow: 0 6px 20px rgba(76, 217, 100, 0.35);
     }
 
     .btn-team {
@@ -98,35 +109,45 @@
 
     .btn-team:hover {
       transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(96, 165, 250, 0.35);
+      box-shadow: 0 6px 20px rgba(96, 165, 250, 0.35);
     }
 
-    .btn-onboarding {
+    .btn-onboarding, .btn-welcome {
       background: linear-gradient(135deg, #7c2d12, #fbbf24);
       color: #0f172a;
     }
 
-    .btn-onboarding:hover {
+    .btn-onboarding:hover, .btn-welcome:hover {
       transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(251, 191, 36, 0.35);
+      box-shadow: 0 6px 20px rgba(251, 191, 36, 0.35);
     }
+
+    .btn-leader {
+      background: linear-gradient(135deg, #1e3a8a, #60a5fa);
+      color: white;
+    }
+    .btn-leader:hover { box-shadow: 0 6px 20px rgba(96, 165, 250, 0.4); }
+
+    .btn-member {
+      background: linear-gradient(135deg, #7f1d1d, #f87171);
+      color: white;
+    }
+    .btn-member:hover { box-shadow: 0 6px 20px rgba(248, 113, 113, 0.4); }
 
     footer {
       margin-top: 4.2rem;
       color: #94a3b8;
       font-size: 0.95rem;
       text-align: center;
-      line-height: 1.7;
+      line-height: 1.72;
       padding-top: 2.6rem;
       border-top: 1px solid #2d2d44;
     }
 
-    @media (max-width: 600px) {
-      .btn {
-        width: 94%;
-        padding: 12px 0;
-        min-width: auto;
-      }
+    @media (max-width: 620px) {
+      body { padding: 3.6rem 1.6rem; font-size: 1.05rem; }
+      h1 { font-size: 2.3rem; }
+      .btn { width: 94%; padding: 14px 0; min-width: auto; }
     }
   </style>
 </head>
@@ -139,174 +160,95 @@ You are not broken.<br>
 You are carrying more than most people ever see.
 </h1>
 
-<p>
-Burnout rarely looks like collapse.<br>
-More often, it looks like functioning — quietly.
-</p>
-
-<p>
-You still show up.<br>
-You still respond.<br>
-You still deliver.<br>
-But something inside you has learned how to go silent just to survive the day.
-</p>
-
-<p>
-This page exists for that version of you.<br>
-The one who keeps moving — not because it’s easy, but because stopping feels impossible.
-</p>
+<p>Burnout rarely looks like collapse. More often, it looks like functioning — quietly.</p>
+<p>You still show up. You still respond. You still deliver. But something inside you has learned how to go silent just to survive the day.</p>
+<p>This page exists for that version of you — the one who keeps moving, not because it’s easy, but because stopping feels impossible.</p>
 
 <div class="quiet-box">
-This is not a productivity system.<br>
-It is not therapy.<br>
-It is not motivation.<br><br>
+This is not a productivity system. It is not therapy. It is not motivation.<br>
 It is a quiet, private, daily human presence — designed to help you carry what you’re already carrying, with less weight.
 </div>
 
 <h2>What this support actually is</h2>
-
-<p>
-Every morning, at 7:00 AM EST, one message arrives.
-</p>
-
-<p>
-Not a checklist.<br>
-Not a lesson.<br>
-Not a reminder of what you should be doing.
-</p>
-
-<p>
-Just one message — written to meet you exactly where you are that day.<br>
-Professionally. Emotionally. Humanly.
-</p>
-
-<p>
-The goal is not to fix you.<br>
-The goal is to give you somewhere to stand — so the day does not have to crush you before it even begins.
-</p>
+<p>Every morning, at 7:00 AM EST, one message arrives.</p>
+<p>Not a checklist. Not a lesson. Not a reminder of what you should be doing.</p>
+<p>Just one message — written to meet you exactly where you are that day. Professionally. Emotionally. Humanly.</p>
+<p>The goal is not to fix you. The goal is to give you somewhere to stand — so the day does not have to crush you before it even begins.</p>
 
 <div class="divider"></div>
 
 <h2>If you are here as an individual</h2>
-
-<p>
-Your life is not one dimension.<br>
-You are managing work, expectations, finances, relationships, and an inner world that rarely gets acknowledged.
-</p>
-
-<p>
-This support helps you navigate your professional life without pretending you have infinite energy.
-</p>
-
-<p>
-It respects your real schedule, your real limits, and the fact that focus requires space, not pressure.
-</p>
-
-<p>
-Emotionally, it reminds you of something easy to forget.
-</p>
-
-<p>
-Rest is not failure.<br>
-Boundaries are not selfishness.<br>
-Slowing down is not falling behind.
-</p>
+<p>Your life is not one dimension. You are managing work, expectations, finances, relationships, and an inner world that rarely gets acknowledged.</p>
+<p>This support helps you navigate your professional life without pretending you have infinite energy.</p>
+<p>It respects your real schedule, your real limits, and the fact that focus requires space, not pressure.</p>
+<p>Emotionally, it reminds you of something easy to forget:</p>
+<p>Rest is not failure. Boundaries are not selfishness. Slowing down is not falling behind.</p>
 
 <div class="divider"></div>
 
 <h2>If you lead a team</h2>
-
-<p>
-Leadership is rarely loud.<br>
-Most of its weight is carried alone.
-</p>
-
-<p>
-You make decisions that affect livelihoods.
-</p>
-
-<p>
-You absorb pressure so others do not have to.
-</p>
-
-<p>
-This support is built to help you lead without losing yourself.
-</p>
-
-<p>
-To make decisions from steadiness, not urgency.
-</p>
-
-<p>
-To stay grounded when everything around you accelerates.
-</p>
+<p>Leadership is rarely loud. Most of its weight is carried alone.</p>
+<p>You make decisions that affect livelihoods. You absorb pressure so others do not have to.</p>
+<p>This support is built to help you lead without losing yourself — to make decisions from steadiness, not urgency, and to stay grounded when everything around you accelerates.</p>
 
 <div class="divider"></div>
 
 <h2>If you are part of a team</h2>
-
-<p>
-You are more than your output.
-</p>
-
-<p>
-More than how much pressure you can absorb without complaining.
-</p>
-
-<p>
-Performance grows best when people feel supported, not watched.
-</p>
+<p>You are more than your output. More than how much pressure you can absorb without complaining.</p>
+<p>Performance grows best when people feel supported, not watched.</p>
 
 <div class="divider"></div>
 
 <h2>About privacy</h2>
+<p>Nothing here is tracked. Nothing is sold. Nothing is reported.</p>
+<p>Your messages are private. They are shaped only by what you choose to share.</p>
+<p>This is not advice. This is companionship.</p>
 
-<p>
-Nothing here is tracked.
-</p>
+<div class="divider"></div>
 
-<p>
-Nothing is sold.
-</p>
+<h1>
+This isn’t onboarding.<br>
+It’s the moment you stop guessing what you need — and start receiving it, gently, consistently, and without judgment.
+</h1>
 
-<p>
-Nothing is reported.
-</p>
+<p>You’ve already taken the most important step: choosing to be supported.</p>
+<p>Not fixed. Not optimized. Not made more productive at the cost of your humanity.</p>
+<p>But supported—in the quiet, steady way that acknowledges how much you’ve been carrying without ever being asked to name it.</p>
 
-<p>
-Your messages are private.
-</p>
+<div class="quiet">
+This system doesn’t just send advice.
+</div>
+<div class="quiet">
+It learns from you.
+</div>
+<div class="quiet">
+It notices patterns in your energy, your language, your priorities.
+</div>
+<div class="quiet">
+It gently reinforces what’s working—your ability to stay calm under pressure, your commitment to integrity, your quiet acts of care that go unnoticed.
+</div>
+<div class="quiet">
+And it helps you release what’s draining you—the habit of over-explaining, the fear of disappointing others, the belief that your worth is tied to your output.
+</div>
+<div class="quiet">
+All of this happens privately.
+</div>
 
-<p>
-They are shaped only by what you choose to share.
-</p>
+<h2>Your onboarding paths</h2>
+<p>Below are four paths. Each leads to a different kind of support—but all lead to the same truth:</p>
+<p><strong>You don’t have to carry everything alone.</strong></p>
 
-<p>
-This is not advice.
-</p>
-
-<p>
-This is companionship.
-</p>
-
-<div class="buttons">
-  <a href="https://markbennett8.gumroad.com/l/yyjgyc" class="btn btn-individual">
-    Personal Daily Support — $30 / month
-  </a>
-
-  <a href="https://markbennett8.gumroad.com/l/uzkgp" class="btn btn-team">
-    Team Support (Up to 10) — $250 / month
-  </a>
-
-  <a href="team.html" class="btn btn-onboarding">
-    Continue to Onboarding →
-  </a>
+<div class="btn-group">
+  <a href="https://daily-support.vercel.app/onboarding-individual.html" class="btn btn-individual">Begin Individual Onboarding</a>
+  <a href="https://daily-support.vercel.app/onboarding-leader.html" class="btn btn-leader">Start Team Leader Onboarding</a>
+  <a href="https://daily-support.vercel.app/onboarding-member.html" class="btn btn-member">Complete Team Member Onboarding</a>
+  <a href="https://daily-support.vercel.app/welcome.html" class="btn btn-welcome">View the Welcome Page</a>
 </div>
 
 <footer>
 Private. Human. Daily.<br>
-No tracking. No pressure. No noise.<br>
-Just presence — when it matters most.
+Support that meets you where you are — not where you “should” be.<br>
+No tracking. No metrics. No surveillance. Just presence.
 </footer>
 
 </body>
